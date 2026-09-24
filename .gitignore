@@ -1,0 +1,8 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+vlmc-*
+
+# 배포 문서 - 문의 후 개별 배포 정책
+assets/docs/*
