@@ -6,3 +6,8 @@ vlmc-*
 
 # 배포 문서 - 문의 후 개별 배포 정책
 assets/docs/*
+
+# 예외: 공개용 품목 요약본 (가격·마감일 제외본, 2026-09-27)
+!assets/docs/vlmc-aluminium-ingot-summary.pdf
+!assets/docs/vlmc-tin-ingot-summary.pdf
+!assets/docs/vlmc-tin-slag-summary.pdf
