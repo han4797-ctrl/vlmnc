@@ -1419,6 +1419,70 @@ a[href^="mailto:"] {
   font-size: 17px;
 }
 .mfr-card p { color: var(--muted); font-size: 14px; }
+.ceo-wrap { margin-top: 64px; }
+.ceo-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  padding: 40px 24px 36px;
+  background: linear-gradient(160deg, var(--navy-3), var(--navy) 70%);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: #e9e2d2;
+  overflow: hidden;
+}
+.ceo-card::before {
+  content: "\201C";
+  position: absolute;
+  top: 4px;
+  right: 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 160px;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.14;
+  pointer-events: none;
+}
+.ceo-head .eyebrow { color: var(--gold-2); }
+.ceo-head h3 {
+  font-family: var(--display);
+  font-size: clamp(26px, 5.6vw, 40px);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #f4efe6;
+}
+.ceo-body p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #d9d1bf;
+}
+.ceo-body p + p { margin-top: 16px; }
+.ceo-body .ceo-pledge {
+  padding-left: 16px;
+  border-left: 3px solid var(--gold);
+  color: var(--gold-soft);
+  font-family: var(--display);
+  font-size: 17px;
+}
+.ceo-body .ceo-sign {
+  margin-top: 28px;
+  text-align: right;
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gold-2);
+}
+@media (min-width: 1024px) {
+  .ceo-card {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 56px;
+    padding: 56px;
+  }
+  .ceo-head { align-self: start; }
+}
 .item-docs { margin-top: 36px; }
 .item-docs-head h4 {
   margin: 0 0 6px;
