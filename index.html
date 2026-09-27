@@ -373,6 +373,10 @@
                       <td><span data-i18n="contact.addr.vl">인천광역시 서구 청라한내로72번길 7-15</span></td>
                     </tr>
                     <tr>
+                      <td data-i18n="prof.field.idpartner">인도네시아 파트너</td>
+                      <td data-i18n="prof.field.idpartnerv">PT APEX TELCOM INKO (Tangerang) · 현지 계약·실행</td>
+                    </tr>
+                    <tr>
                       <td data-i18n="prof.field.scope">사업 영역</td>
                       <td data-i18n="prof.field.scopev">자원 무역 / B2B 소싱 · 검수 · 수출입 · 납품 · 발전 사업</td>
                     </tr>
@@ -1371,25 +1375,25 @@
 
         <div class="track-panel reveal" id="trackPanel">
           <div class="track-panel-copy">
-            <p class="track-badge" data-i18n="track.badge">시연 · Demo</p>
-            <h3 data-i18n="track.title">선적 추적</h3>
-            <p data-i18n="track.lead">샘플 B/L 번호를 넣으면 가상 항로가 지도에 표시됩니다. 실제 선사 추적과 연결되어 있지 않습니다.</p>
+            <p class="track-badge" data-i18n="track.badge">예시 · Example</p>
+            <h3 data-i18n="track.title">거래 진행 흐름 예시</h3>
+            <p data-i18n="track.lead">예시 번호를 고르면 산지 선적부터 한국 도착까지 거래가 진행되는 흐름을 지도에 보여 드립니다. 실제 선박·화물 정보가 아닙니다.</p>
           </div>
           <form class="track-form" id="trackForm" novalidate>
             <label class="track-field" for="blInput">
-              <span data-i18n="track.label">B/L 번호</span>
+              <span data-i18n="track.label">예시 번호</span>
               <input type="text" id="blInput" name="bl" maxlength="24" spellcheck="false" autocomplete="off" placeholder="VL-DAR-2608-001" data-i18n-ph="track.ph">
             </label>
-            <button class="btn btn-primary" type="submit" data-i18n="track.go">추적</button>
+            <button class="btn btn-primary" type="submit" data-i18n="track.go">흐름 보기</button>
           </form>
           <div class="track-samples" id="trackSamples">
-            <span data-i18n="track.samples">샘플 번호</span>
+            <span data-i18n="track.samples">예시 번호</span>
             <button type="button" class="track-chip" data-bl="VL-DAR-2608-001">VL-DAR-2608-001</button>
             <button type="button" class="track-chip" data-bl="VL-JKT-2608-014">VL-JKT-2608-014</button>
             <button type="button" class="track-chip" data-bl="VL-USN-2608-021">VL-USN-2608-021</button>
           </div>
           <p class="track-msg" id="trackMsg" hidden></p>
-          <p class="track-note" data-i18n="track.note">본 기능은 홈페이지 시연용입니다. 실제 컨테이너 위치·ETA는 계약 후 선사·포워더 자료로 안내합니다.</p>
+          <p class="track-note" data-i18n="track.note">화면의 선박명·번호·항로는 설명을 위한 예시입니다. 실제 선적 일정과 ETA는 계약 후 선사·포워더 자료로 안내합니다.</p>
         </div>
 
         <figure class="network-map reveal">
@@ -1406,7 +1410,7 @@
               </g>
             </svg>
             <aside class="track-hud" id="trackHud" hidden>
-              <p class="track-hud-kicker" data-i18n="track.badge">시연 · Demo</p>
+              <p class="track-hud-kicker" data-i18n="track.badge">예시 · Example</p>
               <dl class="track-hud-dl">
                 <div>
                   <dt data-i18n="track.hud.bl">B/L</dt>
@@ -1697,6 +1701,11 @@
                   <address data-i18n="contact.addr.vl">인천광역시 서구 청라한내로72번길 7-15</address>
                 </li>
               </ul>
+            </article>
+            <article class="contact-desk">
+              <p class="contact-desk-kicker" data-i18n="partner.id.en">Indonesia partner</p>
+              <h3>PT APEX TELCOM INKO</h3>
+              <p class="contact-desk-role" data-i18n="partner.id.role">탕에랑(Tangerang) · 인도네시아 현지 계약 · 실행</p>
             </article>
           </div>
         </div>
