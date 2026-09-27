@@ -615,6 +615,7 @@ a[href^="mailto:"] {
 /* ---------- Sections ---------- */
 .section { padding: 72px 0; }
 .products { background: var(--white); }
+.products .materials { margin-bottom: 40px; }
 .section-head { margin-bottom: 36px; max-width: 640px; }
 .section-head h2,
 .about h2,
