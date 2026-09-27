@@ -1523,20 +1523,13 @@ a[href^="mailto:"] {
   margin-top: 16px;
 }
 .item-doc {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 18px 18px 16px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-left: 4px solid var(--gold);
   border-radius: 14px;
-  color: inherit;
-  text-decoration: none;
-  transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease);
-}
-.item-doc:hover,
-.item-doc:focus-visible {
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
 }
 .item-doc h5 {
   margin: 2px 0 8px;
@@ -1544,14 +1537,32 @@ a[href^="mailto:"] {
   font-size: 17px;
 }
 .item-doc p { color: var(--muted); font-size: 14px; }
-.item-doc-meta {
-  display: inline-block;
-  margin-top: 10px;
+.item-doc .item-doc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+.item-doc-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
   color: var(--gold-ink);
   font-size: 13px;
   font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
 }
-.item-doc-meta::after { content: " ↓"; }
+.item-doc-links a::after { content: " ↓"; white-space: pre; }
+.item-doc-links a:hover,
+.item-doc-links a:focus-visible {
+  background: var(--gold);
+  color: var(--navy);
+}
 @media (min-width: 768px) {
   .item-docs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
