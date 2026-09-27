@@ -1420,6 +1420,27 @@ a[href^="mailto:"] {
   font-size: 17px;
 }
 .mfr-card p { color: var(--muted); font-size: 14px; }
+.wa-float {
+  position: fixed;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(7, 21, 37, 0.28);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.wa-float:hover,
+.wa-float:focus-visible {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 14px 34px rgba(7, 21, 37, 0.34);
+}
+@media print { .wa-float { display: none; } }
 .ceo-wrap { margin-top: 64px; }
 .ceo-card {
   position: relative;
@@ -2705,13 +2726,14 @@ a[href^="mailto:"] {
 @media (min-width: 768px) {
   .doc-toc { grid-template-columns: 1fr 1fr; }
   .header-actions .header-cta { display: inline-flex; }
-  .strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .strip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .strip article {
     padding: 32px 24px;
     border-right: 1px solid var(--line);
     border-bottom: 0;
   }
-  .strip article:last-child { border-right: 0; }
+  .strip article:nth-child(even) { border-right: 0; }
+  .strip article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .strip.is-voyage article { border-color: rgba(228, 197, 106, 0.18); }
   .divisions { grid-template-columns: 1fr 1fr; }
   .divisions-roles { grid-template-columns: 1fr 1fr; }
@@ -2830,8 +2852,10 @@ a[href^="mailto:"] {
   .material-break { grid-column: auto; }
   .material strong { font-size: 17px; }
 
-  .strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .strip article { border-bottom: 0; border-right: 1px solid var(--line); }
+  .strip-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .strip article,
+  .strip article:nth-child(-n+2),
+  .strip article:nth-child(even) { border-bottom: 0; border-right: 1px solid var(--line); }
   .strip article:last-child { border-right: 0; }
   .strip.is-voyage article { border-color: rgba(228, 197, 106, 0.18); }
 
