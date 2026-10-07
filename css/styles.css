@@ -25,7 +25,7 @@
   --nickel: #627078;
   --wood: #8a5a32;
   --diesel: #9a7a32;
-  --kaolin: #b8a78a;
+  --palm: #3e5344;
   --eboard: #35608f;
   --ops: #4a7089;
   --laptop: #5f7d8c;
@@ -1243,7 +1243,8 @@ a[href^="mailto:"] {
 [data-tone="nickel"] { --accent: var(--nickel); }
 [data-tone="wood"] { --accent: var(--wood); }
 [data-tone="diesel"] { --accent: var(--diesel); }
-[data-tone="kaolin"] { --accent: var(--kaolin); }
+[data-tone="gold"] { --accent: var(--gold); }
+[data-tone="palm"] { --accent: var(--palm); }
 [data-tone="eboard"] { --accent: var(--eboard); }
 [data-tone="ops"] { --accent: var(--ops); }
 [data-tone="laptop"] { --accent: var(--laptop); }
