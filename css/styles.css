@@ -3129,7 +3129,7 @@ a[href^="mailto:"] {
   .lang-toggle { min-width: 26px; padding: 0 5px; font-size: 9.5px; }
 }
 
-/* ---------- Single-item product group (e.g. 산업광물) ---------- */
+/* ---------- Single-item product group ---------- */
 @media (min-width: 1024px) {
   .product-grid.product-grid-single { grid-template-columns: minmax(0, 1fr); }
   .product-grid-single .product-card {
