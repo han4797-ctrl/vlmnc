@@ -24,7 +24,6 @@
   --tin: #6f8078;
   --nickel: #627078;
   --wood: #8a5a32;
-  --diesel: #9a7a32;
   --palm: #3e5344;
   --eboard: #35608f;
   --ops: #4a7089;
@@ -1243,7 +1242,6 @@ a[href^="mailto:"] {
 [data-tone="tin"] { --accent: var(--tin); }
 [data-tone="nickel"] { --accent: var(--nickel); }
 [data-tone="wood"] { --accent: var(--wood); }
-[data-tone="diesel"] { --accent: var(--diesel); }
 [data-tone="gold"] { --accent: var(--gold); }
 [data-tone="palm"] { --accent: var(--palm); }
 [data-tone="eboard"] { --accent: var(--eboard); }
@@ -1677,7 +1675,6 @@ a[href^="mailto:"] {
 .map-pin.is-hub .map-pin-dot { background: var(--navy); }
 .map-pin.is-korea .map-pin-dot { background: var(--slate); }
 .map-pin.is-wood .map-pin-dot { background: #7a9a4e; }
-.map-pin.is-diesel .map-pin-dot { background: #c4a056; }
 .map-pin.is-coal .map-pin-dot { background: #c4a056; }
 .map-pin.is-aluminum .map-pin-dot { background: #c5d0d8; }
 .map-pin.is-copper .map-pin-dot { background: #c47a3a; }
@@ -1742,7 +1739,6 @@ a[href^="mailto:"] {
   color: var(--gold-2);
 }
 .map-pin.is-wood .map-pin-card em { color: #c5d989; }
-.map-pin.is-diesel .map-pin-card em { color: #e0c07a; }
 .map-pin.is-coal .map-pin-card em { color: #e0c07a; }
 .map-pin.is-copper .map-pin-card em { color: #e09a5a; }
 .map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
