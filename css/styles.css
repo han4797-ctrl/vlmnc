@@ -20,6 +20,7 @@
   --gold-ink: #6b5314;
   --copper: #b87333;
   --concentrate: #b87333;
+  --brass: #c4a04a;
   --aluminum: #8a97a4;
   --tin: #6f8078;
   --nickel: #627078;
@@ -1238,6 +1239,7 @@ a[href^="mailto:"] {
 
 [data-tone="copper"] { --accent: var(--copper); }
 [data-tone="concentrate"] { --accent: var(--concentrate); }
+[data-tone="brass"] { --accent: var(--brass); }
 [data-tone="aluminum"] { --accent: var(--aluminum); }
 [data-tone="tin"] { --accent: var(--tin); }
 [data-tone="nickel"] { --accent: var(--nickel); }
