@@ -1634,7 +1634,7 @@ a[href^="mailto:"] {
 }
 .network-map-canvas {
   position: relative;
-  background: #050505;
+  background: #fff;
 }
 .network-map-canvas > img {
   width: 100%;
