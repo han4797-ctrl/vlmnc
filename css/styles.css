@@ -1634,7 +1634,7 @@ a[href^="mailto:"] {
 }
 .network-map-canvas {
   position: relative;
-  background: #fff;
+  background: #050505;
 }
 .network-map-canvas > img {
   width: 100%;
@@ -1680,6 +1680,8 @@ a[href^="mailto:"] {
 .map-pin.is-coal .map-pin-dot { background: #c4a056; }
 .map-pin.is-aluminum .map-pin-dot { background: #c5d0d8; }
 .map-pin.is-copper .map-pin-dot { background: #c47a3a; }
+.map-pin.is-brass .map-pin-dot { background: #c4a04a; }
+.map-pin.is-tin .map-pin-dot { background: #9aa3ad; }
 .map-pin.is-nickel .map-pin-dot { background: #5f9e8e; }
 .map-pin-leader {
   position: absolute;
@@ -1743,6 +1745,8 @@ a[href^="mailto:"] {
 .map-pin.is-wood .map-pin-card em { color: #c5d989; }
 .map-pin.is-coal .map-pin-card em { color: #e0c07a; }
 .map-pin.is-copper .map-pin-card em { color: #e09a5a; }
+.map-pin.is-brass .map-pin-card em { color: #e0c06a; }
+.map-pin.is-tin .map-pin-card em { color: #c5ccd4; }
 .map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
 .map-pin.is-nickel .map-pin-card em { color: #8fc9b8; }
 .map-pin.is-electronics .map-pin-card em { color: #7eb6de; }
