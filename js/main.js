@@ -2236,7 +2236,8 @@ function applyLang(next) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const value = copy[el.getAttribute("data-i18n")];
     if (!value) return;
-    if (el.tagName === "OPTION") {
+    const tag = el.tagName;
+    if (tag === "OPTION" || tag === "TITLE" || tag === "title") {
       el.textContent = value;
       return;
     }
