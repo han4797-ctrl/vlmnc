@@ -1636,10 +1636,18 @@ a[href^="mailto:"] {
   position: relative;
   background: #fff;
 }
-.network-map-canvas > img {
-  width: 100%;
-  height: auto;
+.network-chart {
   display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.network-chart .sea { fill: #fff; }
+.network-chart .land {
+  fill: #1a3a5c;
+  stroke: #14324d;
+  stroke-width: 1.25;
+  stroke-linejoin: round;
 }
 .map-pins {
   position: absolute;
@@ -1673,11 +1681,7 @@ a[href^="mailto:"] {
   transform: rotate(45deg);
 }
 .map-pin.is-resource .map-pin-dot { background: var(--gold); }
-.map-pin.is-electronics .map-pin-dot { background: #4e8fc0; }
-.map-pin.is-hub .map-pin-dot { background: var(--navy); }
-.map-pin.is-korea .map-pin-dot { background: var(--slate); }
 .map-pin.is-wood .map-pin-dot { background: #7a9a4e; }
-.map-pin.is-coal .map-pin-dot { background: #c4a056; }
 .map-pin.is-aluminum .map-pin-dot { background: #c5d0d8; }
 .map-pin.is-copper .map-pin-dot { background: #c47a3a; }
 .map-pin.is-brass .map-pin-dot { background: #c4a04a; }
@@ -1722,11 +1726,6 @@ a[href^="mailto:"] {
   line-height: 1.2;
   pointer-events: none;
 }
-.map-pin.is-hub .map-pin-card,
-.map-pin.is-korea .map-pin-card {
-  white-space: normal;
-  max-width: 168px;
-}
 .map-pin-card strong {
   display: block;
   font-size: 12px;
@@ -1743,15 +1742,11 @@ a[href^="mailto:"] {
   color: var(--gold-2);
 }
 .map-pin.is-wood .map-pin-card em { color: #c5d989; }
-.map-pin.is-coal .map-pin-card em { color: #e0c07a; }
 .map-pin.is-copper .map-pin-card em { color: #e09a5a; }
 .map-pin.is-brass .map-pin-card em { color: #e0c06a; }
 .map-pin.is-tin .map-pin-card em { color: #c5ccd4; }
 .map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
 .map-pin.is-nickel .map-pin-card em { color: #8fc9b8; }
-.map-pin.is-electronics .map-pin-card em { color: #7eb6de; }
-.map-pin.is-hub .map-pin-card em { color: #9ec9e8; }
-.map-pin.is-korea .map-pin-card em { color: #c5ccd4; }
 .map-pin[data-label="e"] .map-pin-leader { transform: rotate(0deg); }
 .map-pin[data-label="e"] .map-pin-card {
   left: calc(var(--arm, 48px) + 8px);
@@ -1826,12 +1821,6 @@ a[href^="mailto:"] {
   flex: 0 0 auto;
 }
 .resource-dot { background: var(--gold); }
-.electronics-dot { background: #4e8fc0; }
-.hub-dot {
-  background: var(--navy);
-  border: 2px solid var(--navy);
-}
-.korea-dot { background: var(--slate); }
 .track-panel {
   display: grid;
   gap: 14px;
@@ -2063,11 +2052,6 @@ a[href^="mailto:"] {
   border-radius: 16px;
 }
 .location-card[data-network="resource"] { border-top: 3px solid var(--gold); }
-.location-card[data-network="electronics"] { border-top: 3px solid #65a5d8; }
-.location-card[data-network="hub"] { border-top: 3px solid var(--navy); }
-.location-card[data-network="hub"] .location-type { color: var(--navy); }
-.location-card[data-network="korea"] { border-top: 3px solid var(--slate); }
-.location-card[data-network="korea"] .location-type { color: var(--slate); }
 .location-index {
   font-family: Outfit, "PingFang SC", "Microsoft YaHei", serif;
   color: var(--muted);
@@ -2083,7 +2067,6 @@ a[href^="mailto:"] {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-.location-card[data-network="electronics"] .location-type { color: #356b98; }
 .location-card h3 {
   margin-bottom: 2px;
   color: var(--navy);
