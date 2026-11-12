@@ -1638,18 +1638,9 @@ a[href^="mailto:"] {
 }
 .network-map-canvas > .vlmap {
   width: 100%;
-  height: auto;
-  display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
-}
-.network-chart .sea { fill: #fff; }
-.network-chart .land {
-  fill: #1a3a5c;
-  stroke: #14324d;
-  stroke-width: 1.25;
-  stroke-linejoin: round;
+  display: block;
 }
 .vlmap .sea { fill: #fff; }
 .vlmap .grat line {
