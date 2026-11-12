@@ -1636,17 +1636,21 @@ a[href^="mailto:"] {
   position: relative;
   background: #fff;
 }
-.network-chart {
-  display: block;
+.network-map-canvas > .vlmap {
   width: 100%;
   max-width: 100%;
   height: auto;
+  display: block;
 }
-.network-chart .sea { fill: #fff; }
-.network-chart .land {
-  fill: #1a3a5c;
-  stroke: #14324d;
-  stroke-width: 1.25;
+.vlmap .sea { fill: #fff; }
+.vlmap .grat line {
+  stroke: rgba(7, 21, 37, 0.12);
+  stroke-width: 0.6;
+}
+.vlmap .land {
+  fill: #16344c;
+  stroke: #0c2438;
+  stroke-width: 0.45;
   stroke-linejoin: round;
 }
 .map-pins {
@@ -1663,6 +1667,21 @@ a[href^="mailto:"] {
   top: var(--y);
   transform: translate(-50%, -50%);
   z-index: var(--z, 3);
+  pointer-events: auto;
+  cursor: pointer;
+}
+.map-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+}
+.map-pin:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 .map-pin-dot {
   display: block;
@@ -1747,6 +1766,9 @@ a[href^="mailto:"] {
 .map-pin.is-tin .map-pin-card em { color: #c5ccd4; }
 .map-pin.is-aluminum .map-pin-card em { color: #d5dde3; }
 .map-pin.is-nickel .map-pin-card em { color: #8fc9b8; }
+.map-pin.is-active .map-pin-dot {
+  box-shadow: 0 0 0 6px rgba(201, 162, 39, 0.38);
+}
 .map-pin[data-label="e"] .map-pin-leader { transform: rotate(0deg); }
 .map-pin[data-label="e"] .map-pin-card {
   left: calc(var(--arm, 48px) + 8px);
@@ -1942,13 +1964,13 @@ a[href^="mailto:"] {
 }
 .track-route-bg {
   stroke: rgba(47, 158, 216, 0.22);
-  stroke-width: 16;
+  stroke-width: 6.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 .track-route {
   stroke: var(--gold);
-  stroke-width: 8;
+  stroke-width: 3.2;
   stroke-linecap: round;
   stroke-linejoin: round;
   filter: drop-shadow(0 0 7px rgba(47, 158, 216, 0.55));
@@ -2022,6 +2044,16 @@ a[href^="mailto:"] {
   font-size: 13px;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  .track-hud {
+    padding: 8px 10px;
+  }
+  .track-hud-kicker { margin-bottom: 4px; }
+  .track-hud-dl { gap: 2px; margin-bottom: 6px; }
+  .track-hud-dl div { grid-template-columns: 42px 1fr; }
+  .track-hud dt,
+  .track-hud dd { font-size: 11px; }
+}
 .network-map.is-tracking .map-pin-dot {
   transform: scale(0.92);
 }
@@ -2052,6 +2084,16 @@ a[href^="mailto:"] {
   border-radius: 16px;
 }
 .location-card[data-network="resource"] { border-top: 3px solid var(--gold); }
+.location-card[data-pin] { cursor: pointer; }
+.location-card.is-active {
+  border-color: var(--gold);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.location-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
 .location-index {
   font-family: Outfit, "PingFang SC", "Microsoft YaHei", serif;
   color: var(--muted);
@@ -2778,8 +2820,10 @@ a[href^="mailto:"] {
   }
   .track-panel { padding: 24px 24px 18px; }
   .track-hud {
-    left: 16px;
-    right: auto;
+    top: 14px;
+    right: 14px;
+    bottom: auto;
+    left: auto;
     width: 300px;
   }
   .steps { grid-template-columns: 1fr 1fr; }

@@ -68,7 +68,7 @@ const i18n = {
     "brief.toc.03.t": "취급 품목과 계약 포인트",
     "brief.toc.03.d": "품목별로 계약에서 맞추는 것",
     "brief.toc.04.t": "소싱 네트워크",
-    "brief.toc.04.d": "쿠알라탄중·방카-빌리통·자와·칼리만탄·술라웨시·파푸아",
+    "brief.toc.04.d": "쿠알라탄중·방카·빌리통·자와·칼리만탄·술라웨시·파푸아",
     "brief.toc.05.t": "검수와 인도",
     "brief.toc.05.d": "수요 파악 → 소싱·검수 → 물류 → 사후",
     "brief.toc.06.t": "거래를 시작하는 방법",
@@ -151,8 +151,8 @@ const i18n = {
     "products.lead": "비철금속, 에너지, 귀금속·촉매 세 품목군입니다. 사진과 핵심 규격을 보고 고르시면, 카탈로그는 문의 후 보내 드립니다.",
     "network.eyebrow": "The Chart",
     "network.title": "신대륙을 여는 해도",
-    "network.lead": "인도네시아 산지를 중심으로 맞춥니다. 알루미늄은 쿠알라탄중, 주석 괴는 방카·빌리통, 황동은 자와, 우드펠릿은 칼리만탄, 니켈은 술라웨시, 구리 스크랩은 파푸아입니다. 항만 거점은 자카르타입니다.",
-    "network.map.alt": "쿠알라탄중 알루미늄, 방카·빌리통 주석, 자와 황동, 칼리만탄 우드펠릿, 술라웨시 니켈, 파푸아 구리, 자카르타 거점을 표시한 인도네시아 지도",
+    "network.lead": "인도네시아 산지를 중심으로 맞춥니다. 알루미늄은 쿠알라탄중, 주석 괴와 주석 슬래그는 방카·빌리통, 황동은 자와, 우드펠릿은 칼리만탄, 니켈은 술라웨시, 구리 스크랩은 파푸아입니다. 항만 거점은 자카르타입니다.",
+    "network.map.alt": "쿠알라탄중 알루미늄, 방카·빌리통 주석, 자와 황동, 칼리만탄 우드펠릿, 술라웨시 니켈, 파푸아 구리, 자카르타 거점을 표시한 인도네시아 해도",
     "network.legend.resource": "자원 공급 거점",
     "network.tag.resourceHub": "자원 거점",
     "network.tag.aluminum": "알루미늄",
@@ -164,9 +164,9 @@ const i18n = {
     "network.ktn": "쿠알라탄중",
     "network.ktn.country": "인도네시아",
     "network.ktn.desc": "북수마트라 INALUM 1차 알루미늄",
-    "network.bangka": "방카 · 빌리통",
+    "network.bangka": "방카·빌리통",
     "network.bangka.country": "인도네시아",
-    "network.bangka.desc": "방카·빌리통 주석 괴 공급 거점",
+    "network.bangka.desc": "방카·빌리통 주석 괴·주석 슬래그 공급 거점",
     "network.jawa": "자와",
     "network.jawa.country": "인도네시아",
     "network.jawa.desc": "자와 황동 괴 공급 거점",
@@ -202,10 +202,13 @@ const i18n = {
     "track.status.done": "도착",
     "track.cargo.cu": "구리 스크랩",
     "track.cargo.wood": "우드펠릿",
+    "track.cargo.tin": "주석 괴",
     "track.vessel.pap": "MV VL PAPUA",
     "track.vessel.kal": "MV VL BORNEO",
+    "track.vessel.bb": "MV VL BANGKA",
     "track.route.pap": "파푸아 → 자카르타",
     "track.route.kal": "칼리만탄 → 자카르타",
+    "track.route.bb": "방카·빌리통 → 자카르타",
     "hall.res.kicker": "Resources Digital Showroom",
     "spec.form": "형태",
     "spec.mark": "각인",
@@ -243,7 +246,7 @@ const i18n = {
     "p.tin.badge.form": "제련 부산물",
     "p.tin.badge.assay": "함량 기준",
     "p.tin.badge.use": "유가금속 회수",
-    "p.tin.spec.origin.v": "방카",
+    "p.tin.spec.origin.v": "방카·빌리통",
     "p.tin.spec.form.v": "슬래그 · 회수 원료",
     "p.sni.badge.metal": "주석 괴",
     "p.sni.badge.form": "금속 잉곳",
@@ -624,8 +627,8 @@ const i18n = {
     "products.lead": "Three groups: non-ferrous metals, energy, and precious metals and catalyst. Review photos and key specs here; catalogs are sent after inquiry.",
     "network.eyebrow": "The Chart",
     "network.title": "A chart for new origins",
-    "network.lead": "We chart Indonesian origins. Aluminum from Kuala Tanjung, tin ingot from Bangka–Belitung, brass from Java, wood pellets from Kalimantan, nickel from Sulawesi, copper scrap from Papua. The port hub is Jakarta.",
-    "network.map.alt": "Indonesia map showing aluminum at Kuala Tanjung, tin in Bangka–Belitung, brass in Java, wood pellets in Kalimantan, nickel in Sulawesi, copper in Papua, and the Jakarta hub",
+    "network.lead": "We chart Indonesian origins. Aluminum from Kuala Tanjung, tin ingot and tin slag from Bangka–Belitung, brass from Java, wood pellets from Kalimantan, nickel from Sulawesi, copper scrap from Papua. The port hub is Jakarta.",
+    "network.map.alt": "Indonesia chart showing aluminum at Kuala Tanjung, tin in Bangka–Belitung, brass in Java, wood pellets in Kalimantan, nickel in Sulawesi, copper in Papua, and the Jakarta hub",
     "network.legend.resource": "Resource sourcing",
     "network.tag.resourceHub": "Resource hub",
     "network.tag.aluminum": "Aluminum",
@@ -639,7 +642,7 @@ const i18n = {
     "network.ktn.desc": "INALUM primary aluminum, North Sumatra",
     "network.bangka": "Bangka–Belitung",
     "network.bangka.country": "Indonesia",
-    "network.bangka.desc": "Bangka–Belitung tin-ingot supply hub",
+    "network.bangka.desc": "Bangka–Belitung tin ingot and tin slag supply hub",
     "network.jawa": "Java",
     "network.jawa.country": "Indonesia",
     "network.jawa.desc": "Java brass-ingot supply hub",
@@ -675,10 +678,13 @@ const i18n = {
     "track.status.done": "Arrived",
     "track.cargo.cu": "Copper scrap",
     "track.cargo.wood": "Wood pellets",
+    "track.cargo.tin": "Tin ingot",
     "track.vessel.pap": "MV VL PAPUA",
     "track.vessel.kal": "MV VL BORNEO",
+    "track.vessel.bb": "MV VL BANGKA",
     "track.route.pap": "Papua → Jakarta",
     "track.route.kal": "Kalimantan → Jakarta",
+    "track.route.bb": "Bangka–Belitung → Jakarta",
     "hall.res.kicker": "Resources Digital Showroom",
     "spec.form": "Form",
     "spec.mark": "Stamp",
@@ -716,7 +722,7 @@ const i18n = {
     "p.tin.badge.form": "Smelt by-product",
     "p.tin.badge.assay": "Assay basis",
     "p.tin.badge.use": "Metal recovery",
-    "p.tin.spec.origin.v": "Bangka",
+    "p.tin.spec.origin.v": "Bangka–Belitung",
     "p.tin.spec.form.v": "Slag · recovery feed",
     "p.sni.badge.metal": "Tin ingot",
     "p.sni.badge.form": "Metal ingot",
@@ -1027,7 +1033,7 @@ const i18n = {
     "brief.toc.03.t": "Produk &amp; poin kontrak",
     "brief.toc.03.d": "Apa yang dikunci kontrak untuk tiap produk",
     "brief.toc.04.t": "Jaringan pengadaan",
-    "brief.toc.04.d": "Kuala Tanjung, Bangka Belitung, Jawa, Kalimantan, Sulawesi, Papua",
+    "brief.toc.04.d": "Kuala Tanjung, Bangka–Belitung, Jawa, Kalimantan, Sulawesi, Papua",
     "brief.toc.05.t": "Inspeksi &amp; pengiriman",
     "brief.toc.05.d": "Kebutuhan → pengadaan dan inspeksi → logistik → purna jual",
     "brief.toc.06.t": "Memulai transaksi",
@@ -1107,8 +1113,8 @@ const i18n = {
     "products.lead": "Tiga kelompok: logam non-ferro, energi, serta logam mulia dan katalis. Lihat foto dan spesifikasi utama di sini; katalog dikirim setelah pertanyaan.",
     "network.eyebrow": "The Chart",
     "network.title": "Peta untuk asal baru",
-    "network.lead": "Kami menempatkan asal Indonesia di pusat peta. Aluminium dari Kuala Tanjung, timah batangan dari Bangka Belitung, kuningan dari Jawa, pelet kayu dari Kalimantan, nikel dari Sulawesi, skrap tembaga dari Papua. Hub pelabuhan adalah Jakarta.",
-    "network.map.alt": "Peta Indonesia yang menampilkan aluminium di Kuala Tanjung, timah di Bangka Belitung, kuningan di Jawa, pelet kayu di Kalimantan, nikel di Sulawesi, tembaga di Papua, serta hub Jakarta",
+    "network.lead": "Kami menempatkan asal Indonesia di pusat peta. Aluminium dari Kuala Tanjung, timah batangan dan terak timah dari Bangka–Belitung, kuningan dari Jawa, pelet kayu dari Kalimantan, nikel dari Sulawesi, skrap tembaga dari Papua. Hub pelabuhan adalah Jakarta.",
+    "network.map.alt": "Peta Indonesia yang menampilkan aluminium di Kuala Tanjung, timah di Bangka–Belitung, kuningan di Jawa, pelet kayu di Kalimantan, nikel di Sulawesi, tembaga di Papua, serta hub Jakarta",
     "network.legend.resource": "Pengadaan sumber daya",
     "network.tag.resourceHub": "Hub sumber daya",
     "network.tag.aluminum": "Aluminium",
@@ -1120,9 +1126,9 @@ const i18n = {
     "network.ktn": "Kuala Tanjung",
     "network.ktn.country": "Indonesia",
     "network.ktn.desc": "Aluminium primer INALUM, Sumatera Utara",
-    "network.bangka": "Bangka Belitung",
+    "network.bangka": "Bangka–Belitung",
     "network.bangka.country": "Indonesia",
-    "network.bangka.desc": "Hub pasokan timah batangan Bangka–Belitung",
+    "network.bangka.desc": "Hub pasokan timah batangan dan terak timah Bangka–Belitung",
     "network.jawa": "Jawa",
     "network.jawa.country": "Indonesia",
     "network.jawa.desc": "Hub pasokan ingot kuningan Jawa",
@@ -1158,10 +1164,13 @@ const i18n = {
     "track.status.done": "Sampai",
     "track.cargo.cu": "Skrap tembaga",
     "track.cargo.wood": "Pelet kayu",
+    "track.cargo.tin": "Timah batangan",
     "track.vessel.pap": "MV VL PAPUA",
     "track.vessel.kal": "MV VL BORNEO",
+    "track.vessel.bb": "MV VL BANGKA",
     "track.route.pap": "Papua → Jakarta",
     "track.route.kal": "Kalimantan → Jakarta",
+    "track.route.bb": "Bangka–Belitung → Jakarta",
     "hall.res.kicker": "Resources Digital Showroom",
     "spec.form": "Bentuk",
     "spec.mark": "Cap",
@@ -1199,7 +1208,7 @@ const i18n = {
     "p.tin.badge.form": "Samping peleburan",
     "p.tin.badge.assay": "Dasar kadar",
     "p.tin.badge.use": "Recovery logam",
-    "p.tin.spec.origin.v": "Bangka",
+    "p.tin.spec.origin.v": "Bangka–Belitung",
     "p.tin.spec.form.v": "Terak · bahan recovery",
     "p.sni.badge.metal": "Timah batangan",
     "p.sni.badge.form": "Ingot logam",
@@ -1487,7 +1496,7 @@ const i18n = {
     "brief.toc.03.t": "品项与合同要点",
     "brief.toc.03.d": "各品项在合同中锁定的内容",
     "brief.toc.04.t": "采购网络",
-    "brief.toc.04.d": "瓜拉丹戎、邦加-勿里洞、爪哇、加里曼丹、苏拉威西、巴布亚",
+    "brief.toc.04.d": "瓜拉丹戎、邦加–勿里洞、爪哇、加里曼丹、苏拉威西、巴布亚",
     "brief.toc.05.t": "检验与交付",
     "brief.toc.05.d": "需求确认 → 采购与检验 → 物流 → 售后",
     "brief.toc.06.t": "如何开始",
@@ -1570,8 +1579,8 @@ const i18n = {
     "products.lead": "有色金属、能源、贵金属与催化剂三大品类。请在此查看图片与核心规格，目录于询价后发送。",
     "network.eyebrow": "航线图",
     "network.title": "探寻新产地的航线图",
-    "network.lead": "以印度尼西亚产地为中心。铝来自瓜拉丹戎，锡锭来自邦加-勿里洞，黄铜来自爪哇，木颗粒来自加里曼丹，镍来自苏拉威西，铜废料来自巴布亚。港口枢纽为雅加达。",
-    "network.map.alt": "印度尼西亚地图标注：瓜拉丹戎的铝、邦加-勿里洞锡、爪哇黄铜、加里曼丹木颗粒、苏拉威西镍、巴布亚铜，以及雅加达枢纽",
+    "network.lead": "以印度尼西亚产地为中心。铝来自瓜拉丹戎，锡锭和锡渣来自邦加–勿里洞，黄铜来自爪哇，木颗粒来自加里曼丹，镍来自苏拉威西，铜废料来自巴布亚。港口枢纽为雅加达。",
+    "network.map.alt": "印度尼西亚海图标注：瓜拉丹戎的铝、邦加–勿里洞的锡、爪哇黄铜、加里曼丹木颗粒、苏拉威西镍、巴布亚铜，以及雅加达枢纽",
     "network.legend.resource": "资源采购",
     "network.tag.resourceHub": "资源枢纽",
     "network.tag.aluminum": "铝",
@@ -1583,9 +1592,9 @@ const i18n = {
     "network.ktn": "瓜拉丹戎",
     "network.ktn.country": "印度尼西亚",
     "network.ktn.desc": "北苏门答腊 INALUM 原生铝",
-    "network.bangka": "邦加-勿里洞",
+    "network.bangka": "邦加–勿里洞",
     "network.bangka.country": "印度尼西亚",
-    "network.bangka.desc": "邦加–勿里洞锡锭供应枢纽",
+    "network.bangka.desc": "邦加–勿里洞锡锭与锡渣供应枢纽",
     "network.jawa": "爪哇",
     "network.jawa.country": "印度尼西亚",
     "network.jawa.desc": "爪哇黄铜锭供应枢纽",
@@ -1621,10 +1630,13 @@ const i18n = {
     "track.status.done": "已到港",
     "track.cargo.cu": "铜废料",
     "track.cargo.wood": "木颗粒",
+    "track.cargo.tin": "锡锭",
     "track.vessel.pap": "MV VL PAPUA",
     "track.vessel.kal": "MV VL BORNEO",
+    "track.vessel.bb": "MV VL BANGKA",
     "track.route.pap": "巴布亚 → 雅加达",
     "track.route.kal": "加里曼丹 → 雅加达",
+    "track.route.bb": "邦加–勿里洞 → 雅加达",
     "hall.res.kicker": "资源数字展厅",
     "spec.form": "形态",
     "spec.mark": "钢印",
@@ -1662,7 +1674,7 @@ const i18n = {
     "p.tin.badge.form": "冶炼副产品",
     "p.tin.badge.assay": "化验基准",
     "p.tin.badge.use": "金属回收",
-    "p.tin.spec.origin.v": "邦加",
+    "p.tin.spec.origin.v": "邦加–勿里洞",
     "p.tin.spec.form.v": "渣料 · 回收原料",
     "p.sni.badge.metal": "锡锭",
     "p.sni.badge.form": "金属锭",
@@ -2262,11 +2274,11 @@ function applyLang(next) {
 }
 
 /* ---------- Shipment tracking demo (mock) ---------- */
-const TRACK_MAP = { w: 1280, h: 720 };
+const TRACK_MAP = { x: 728, y: 318, w: 544, h: 200 };
 const trackSamplesEl = document.getElementById("trackSamples");
 
 function pctToVb(x, y) {
-  return [x / 100 * TRACK_MAP.w, y / 100 * TRACK_MAP.h];
+  return [TRACK_MAP.x + (x / 100) * TRACK_MAP.w, TRACK_MAP.y + (y / 100) * TRACK_MAP.h];
 }
 
 function curvePath(pts) {
@@ -2295,12 +2307,12 @@ const TRACK_SAMPLES = {
     pins: ["pap", "jkt"],
     duration: 8000,
     points: [
-      [90.2, 57.7],
-      [78, 61],
-      [64, 63],
-      [50, 64],
-      [40, 65],
-      [31.1, 66.3]
+      [85.2, 65.0],
+      [68.4, 72.0],
+      [53.7, 80.0],
+      [40.8, 71.0],
+      [33.5, 73.0],
+      [28.4, 75.7]
     ]
   },
   "VL-KAL-2608-014": {
@@ -2310,11 +2322,23 @@ const TRACK_SAMPLES = {
     pins: ["kal", "jkt"],
     duration: 5500,
     points: [
-      [44.7, 46.5],
-      [44.7, 58.5],
-      [38, 61],
-      [33, 64],
-      [31.1, 66.3]
+      [41.5, 47.2],
+      [39.0, 65.0],
+      [33.5, 71.0],
+      [28.4, 75.7]
+    ]
+  },
+  "VL-BB-2608-007": {
+    vessel: "track.vessel.bb",
+    cargo: "track.cargo.tin",
+    route: "track.route.bb",
+    pins: ["bng", "jkt"],
+    duration: 4200,
+    points: [
+      [27.6, 58.5],
+      [31.6, 67.0],
+      [30.1, 72.0],
+      [28.4, 75.7]
     ]
   }
 };
@@ -2368,7 +2392,7 @@ function placeShip(path, len, t) {
   if (!trackShip || !path || len <= 0) return;
   const d = Math.min(len, Math.max(0, len * t));
   const p = path.getPointAtLength(d);
-  const p2 = path.getPointAtLength(Math.min(len, d + 12));
+  const p2 = path.getPointAtLength(Math.min(len, d + 6));
   const ang = (Math.atan2(p2.y - p.y, p2.x - p.x) * 180) / Math.PI + 90;
   trackShip.removeAttribute("hidden");
   trackShip.setAttribute("transform", `translate(${p.x} ${p.y}) rotate(${ang})`);
@@ -2477,6 +2501,29 @@ if (trackForm && blInput) {
     });
   });
 }
+
+
+function selectNetworkPin(id) {
+  document.querySelectorAll(".map-pin.is-active, .location-card.is-active").forEach((el) => {
+    el.classList.remove("is-active");
+  });
+  const pin = document.querySelector(`.map-pin[data-pin="${id}"]`);
+  const card = document.querySelector(`.location-card[data-pin="${id}"]`);
+  if (pin) pin.classList.add("is-active");
+  if (card) {
+    card.classList.add("is-active");
+    card.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest" });
+  }
+}
+
+document.querySelectorAll(".map-pin[data-pin], .location-card[data-pin]").forEach((el) => {
+  el.addEventListener("click", () => selectNetworkPin(el.dataset.pin));
+  el.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    selectNetworkPin(el.dataset.pin);
+  });
+});
 
 applyLang(lang);
 
