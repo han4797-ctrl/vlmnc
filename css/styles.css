@@ -26,6 +26,7 @@
   --nickel: #627078;
   --wood: #8a5a32;
   --palm: #3e5344;
+  --sea: #2f6f86;
   --eboard: #35608f;
   --ops: #4a7089;
   --laptop: #5f7d8c;
@@ -928,7 +929,7 @@ a[href^="mailto:"] {
   border-radius: 20px;
   box-shadow: 0 10px 26px rgba(15, 28, 50, 0.08);
 }
-.tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .sheet-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .tab,
 .sheet-tab {
@@ -1258,6 +1259,7 @@ a[href^="mailto:"] {
 [data-tone="wood"] { --accent: var(--wood); }
 [data-tone="gold"] { --accent: var(--gold); }
 [data-tone="palm"] { --accent: var(--palm); }
+[data-tone="sea"] { --accent: var(--sea); }
 [data-tone="eboard"] { --accent: var(--eboard); }
 [data-tone="ops"] { --accent: var(--ops); }
 [data-tone="laptop"] { --accent: var(--laptop); }
@@ -1610,7 +1612,7 @@ a[href^="mailto:"] {
   color: var(--navy);
 }
 @media (min-width: 768px) {
-  .item-docs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .item-docs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .mfr-give { background: var(--gold-soft); }
 .mfr-list { margin-top: 4px; }
@@ -2892,9 +2894,12 @@ a[href^="mailto:"] {
   }
   .material-wide { grid-column: span 2; }
   .material-break { grid-column: auto; }
+  /* With two tiles left on the last row, let each take half the row. */
+  .material:nth-last-child(2):nth-child(4n+1),
+  .material:last-child:nth-child(4n+2) { grid-column: span 2; }
   .material strong { font-size: 17px; }
 
-  .strip-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .strip-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .strip article,
   .strip article:nth-child(-n+2),
   .strip article:nth-child(even) { border-bottom: 0; border-right: 1px solid var(--line); }
@@ -2910,15 +2915,15 @@ a[href^="mailto:"] {
   .org-wrap { margin-top: 72px; }
   .divisions-lines { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .org-branches {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     padding-top: 22px;
   }
   .org-branches::before {
     content: "";
     position: absolute;
     top: 0;
-    left: calc(16.666% + 8px);
-    right: calc(16.666% + 8px);
+    left: calc(12.5% + 6px);
+    right: calc(12.5% + 6px);
     height: 1px;
     background: var(--gold);
   }
