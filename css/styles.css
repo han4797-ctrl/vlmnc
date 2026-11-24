@@ -3177,3 +3177,10 @@ a[href^="mailto:"] {
   .product-grid-single .product-thumbs { grid-area: thumbs; }
   .product-grid-single .product-body { grid-area: body; align-self: center; }
 }
+.footer-sep { margin: 0 6px; opacity: .5; }
+.footer-extra {
+  opacity: .7;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-extra:hover { opacity: 1; }
