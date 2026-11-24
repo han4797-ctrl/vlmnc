@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>2027 정미년(丁未年) 정통 토정비결 × 자미두수 통합 명리 리포트</title>
+
+  <!-- Google Fonts: 고운 바탕(서사·제목), 본명조(한자), 본고딕(UI·표) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hanji: {
+              50: '#FDFCF9',
+              100: '#FAF7F0',
+              200: '#F2ECE0',
+              300: '#E5DCCB',
+              400: '#D4C7B0'
+            },
+            navy: {
+              900: '#131E35',
+              800: '#1B2A4A',
+              700: '#273B63',
+              100: '#EDF1F7'
+            },
+            gold: {
+              700: '#856528',
+              600: '#9A7734',
+              500: '#B08A42',
+              400: '#C8A660',
+              200: '#E9DCBE',
+              100: '#F6F0E2'
+            },
+            crimson: {
+              700: '#862120',
+              600: '#A62C2B',
+              500: '#BE3B3A',
+              100: '#F9ECEC'
+            },
+            ink: {
+              900: '#242424',
+              700: '#3D3D3D',
+              500: '#5A5A5A',
+              400: '#858585'
+            }
+          },
+          fontFamily: {
+            serif: ['"Gowun Batang"', '"Noto Serif KR"', 'serif'],
+            hanja: ['"Noto Serif KR"', '"Gowun Batang"', 'serif'],
+            sans: ['"Noto Sans KR"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* 한지 아이보리 바탕 & 은은한 전통 격자 문양 */
+    body {
+      background-color: #FAF7F0;
+      color: #242424;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-image:
+        radial-gradient(circle at 10% 0%, rgba(176, 138, 66, 0.09) 0%, transparent 45%),
+        radial-gradient(circle at 90% 10%, rgba(27, 42, 74, 0.06) 0%, transparent 45%),
+        url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23B08A42' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M0 32h64M32 0v64M16 16h32v32H16z'/%3E%3C/g%3E%3C/svg%3E");
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* 전통 인주색 세로 낙관 도장 */
+    .seal-stamp {
+      background: linear-gradient(155deg, #B53433 0%, #8E2221 100%);
+      border: 1.5px solid #D97E7D;
+      box-shadow:
+        inset 0 0 0 1.5px rgba(255, 255, 255, 0.2),
+        0 3px 10px rgba(166, 44, 43, 0.25);
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 0.06em;
+    }
+
+    /* 한지 리포트 카드 */
+    .report-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E5DCCB;
+      box-shadow: 0 8px 26px -10px rgba(27, 42, 74, 0.08), 0 2px 6px rgba(176, 138, 66, 0.05);
+    }
+
+    /* 전통 이중 테두리 족자 프레임 */
+    .scroll-frame {
+      position: relative;
+      background: linear-gradient(180deg, #FFFFFF 0%, #FCF9F2 100%);
+      border: 1.5px solid #D4C198;
+      box-shadow:
+        inset 0 0 0 5px #FFFFFF,
+        inset 0 0 0 6px rgba(176, 138, 66, 0.38),
+        0 14px 36px -12px rgba(27, 42, 74, 0.12);
+    }
+
+    /* 커스텀 셀렉트 화살표 */
+    select.hanji-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231B2A4A'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.8' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 1rem;
+    }
+
+    /* 팔괘 로딩 회전 */
+    @keyframes spinBagua {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spinReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    .bagua-spin {
+      animation: spinBagua 1.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    }
+    .bagua-reverse {
+      animation: spinReverse 4.2s linear infinite;
+    }
+
+    /* 등장 애니메이션 */
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-slide-up {
+      animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .gauge-fill {
+      transition: width 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .narrative-body {
+      font-family: 'Gowun Batang', 'Noto Serif KR', serif;
+      line-height: 1.92;
+      word-break: keep-all;
+    }
+
+    /* =====================================================================
+       자미두수 4×4 전통 방형 명반 스타일
+    ===================================================================== */
+    .zw-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(4, minmax(154px, auto));
+      border: 2px solid #1B2A4A;
+      background-color: #1B2A4A;
+      gap: 1px;
+    }
+
+    .zw-cell {
+      background-color: #FFFFFF;
+      padding: 0.55rem 0.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .zw-cell:hover {
+      background-color: #FAF7F0;
+    }
+
+    /* 삼방사정(三方四正) 하이라이트 상태 */
+    .zw-cell.hl-self {
+      background-color: #FFF7E6 !important;
+      box-shadow: inset 0 0 0 2.5px #A62C2B;
+      z-index: 2;
+    }
+    .zw-cell.hl-opposite {
+      background-color: #F2F6FC !important;
+      box-shadow: inset 0 0 0 2px #1B2A4A;
+      z-index: 1;
+    }
+    .zw-cell.hl-trine {
+      background-color: #FAF4E6 !important;
+      box-shadow: inset 0 0 0 2px #B08A42;
+      z-index: 1;
+    }
+
+    .zw-center {
+      grid-column: 2 / 4;
+      grid-row: 2 / 4;
+      background: linear-gradient(160deg, #FDFCF9 0%, #F7F1E3 100%);
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: default;
+    }
+
+    /* 사화성 배지 */
+    .sihua-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 700;
+      padding: 2px 4px;
+      border-radius: 3px;
+      margin-left: 2px;
+      vertical-align: middle;
+    }
+    .sh-natal-lu  { background: #1B7A43; color: #FFFFFF; }
+    .sh-natal-qu  { background: #B08A42; color: #FFFFFF; }
+    .sh-natal-ke  { background: #1B2A4A; color: #FFFFFF; }
+    .sh-natal-ji  { background: #A62C2B; color: #FFFFFF; }
+
+    .sh-flow-lu   { background: #E3F6EB; color: #115E32; border: 1px solid #1B7A43; }
+    .sh-flow-qu   { background: #FCF4DF; color: #7C5C1E; border: 1px solid #B08A42; }
+    .sh-flow-ke   { background: #E8EFFA; color: #1B2A4A; border: 1px solid #1B2A4A; }
+    .sh-flow-ji   { background: #FDEAEA; color: #962221; border: 1px solid #A62C2B; }
+
+    /* 인쇄 / PDF 저장 최적화 */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        background-image: none !important;
+        color: #111111 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-break-avoid {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .report-card,
+      .scroll-frame {
+        box-shadow: none !important;
+        border: 1px solid #C8BDA6 !important;
+      }
+      #formulaBody {
+        display: block !important;
+      }
+      .monthly-card-item {
+        display: block !important;
+      }
+      .zw-scroll-wrap {
+        overflow: visible !important;
+      }
+      .zw-grid {
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+      @page {
+        margin: 12mm 10mm;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold-200 selection:text-navy-900">
+
+  <!-- 최상단 프리미엄 리포트 띠 헤더 -->
+  <div class="bg-navy-800 text-hanji-100 border-b-2 border-gold-500 no-print">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between text-xs sm:text-sm">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-gold-400"></span>
+        <span class="font-medium tracking-wide">2027 정미년(丁未年) 정통 토정비결 × 자미두수 통합 명리 리포트</span>
+      </div>
+      <span class="text-gold-200 text-[11px] sm:text-xs font-serif hidden sm:inline">정밀 만세력(1930~2027) · 태현수 144괘 · 자미두수 12궁</span>
+    </div>
+  </div>
+
+  <!-- 메인 컨테이너 -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-7 sm:py-10">
+
+    <!-- 전통 이중 테두리 한지 타이틀 헤더 -->
+    <header class="scroll-frame rounded-2xl px-5 sm:px-9 py-6 sm:py-8 mb-8 text-center">
+      <div class="inline-flex items-center justify-center gap-3.5 sm:gap-5 mb-2.5">
+        <span class="seal-stamp text-white text-[11px] font-hanja font-bold px-1.5 py-2.5 rounded-sm select-none" title="정미년">丁未年</span>
+        <div class="text-left">
+          <p class="text-gold-700 text-xs sm:text-sm tracking-[0.18em] font-semibold">2027 붉은 양의 해 · 프리미엄 통합 명리 리포트</p>
+          <h1 class="font-serif text-2xl sm:text-4xl font-bold text-navy-800 tracking-wide mt-0.5">
+            정통 토정비결 <span class="text-gold-500 font-light mx-0.5">×</span> <span class="text-crimson-600">자미두수</span>
+          </h1>
+        </div>
+        <span id="headerRightSeal" class="seal-stamp text-white text-[11px] font-hanja font-bold px-1.5 py-2.5 rounded-sm select-none" title="토정비결">土亭秘訣</span>
+      </div>
+
+      <div class="flex items-center justify-center gap-3 text-gold-500/80 text-xs sm:text-sm tracking-[0.35em] my-2 select-none">
+        <span class="h-px w-10 sm:w-20 bg-gold-400/50"></span>
+        <span>☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷</span>
+        <span class="h-px w-10 sm:w-20 bg-gold-400/50"></span>
+      </div>
+
+      <p class="text-ink-500 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+        전통 태현수(太玄數) 공식의 <strong class="text-navy-800 font-semibold">2027 정통 토정비결</strong>과
+        동양 점성술의 정수 <strong class="text-crimson-600 font-semibold">자미두수 12궁 방형 명반·정미년 사화성</strong>을<br class="hidden sm:inline" />
+        한 번의 사주 입력으로 모두 열람하실 수 있는 격조 높은 한지 리포트입니다.
+      </p>
+    </header>
+
+    <!-- [1] 통합 사주 입력 폼 섹션 -->
+    <section id="inputSection" class="report-card rounded-2xl p-6 sm:p-9 max-w-2xl mx-auto no-print">
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-hanji-300 pb-4 mb-6">
+        <div>
+          <h2 class="font-serif text-xl font-bold text-navy-800">사주 정보 입력</h2>
+          <p class="text-xs sm:text-sm text-ink-500 mt-0.5">1930~2027년 정밀 음양력 변환 엔진으로 144괘와 12궁 명반을 동시 산출합니다.</p>
+        </div>
+        <span class="text-xs px-3 py-1 rounded-full bg-navy-100 text-navy-800 font-semibold border border-navy-800/15">
+          토정비결 + 자미두수 통합
+        </span>
+      </div>
+
+      <form id="fortuneForm" class="space-y-5" novalidate>
+        <!-- 성함 & 성별 -->
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-4">
+          <div class="sm:col-span-7">
+            <label for="userName" class="block text-sm font-semibold text-navy-800 mb-2">
+              성함 <span class="text-ink-400 text-xs font-normal">(선택)</span>
+            </label>
+            <input
+              type="text"
+              id="userName"
+              maxlength="20"
+              placeholder="예: 홍길동 (미입력 시 '귀하')"
+              class="w-full rounded-xl bg-hanji-50 border border-hanji-400 px-4 py-3 text-ink-900 placeholder-ink-400 text-sm sm:text-base focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition"
+            />
+          </div>
+
+          <div class="sm:col-span-5">
+            <span class="block text-sm font-semibold text-navy-800 mb-2">
+              성별 <span class="text-crimson-600">*</span>
+            </span>
+            <div class="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-hanji-200 border border-hanji-300">
+              <button
+                type="button"
+                id="btnMale"
+                class="py-2.5 rounded-lg text-sm font-semibold transition-all bg-navy-800 text-white shadow-sm"
+              >
+                남성 (男)
+              </button>
+              <button
+                type="button"
+                id="btnFemale"
+                class="py-2.5 rounded-lg text-sm font-medium transition-all text-ink-700 hover:text-navy-800"
+              >
+                여성 (女)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 양력 / 음력 평달 / 음력 윤달 선택 -->
+        <div>
+          <span class="block text-sm font-semibold text-navy-800 mb-2">양력 / 음력 구분</span>
+          <div class="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-hanji-200 border border-hanji-300">
+            <button
+              type="button"
+              id="btnSolar"
+              class="py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-navy-800 text-white shadow-sm"
+            >
+              양력 (陽曆)
+            </button>
+            <button
+              type="button"
+              id="btnLunarNormal"
+              class="py-2.5 rounded-lg text-xs sm:text-sm font-medium transition-all text-ink-700 hover:text-navy-800"
+            >
+              음력 평달
+            </button>
+            <button
+              type="button"
+              id="btnLunarLeap"
+              class="py-2.5 rounded-lg text-xs sm:text-sm font-medium transition-all text-ink-700 hover:text-navy-800"
+            >
+              음력 윤달 (閏)
+            </button>
+          </div>
+          <p id="calHint" class="mt-1.5 text-xs text-ink-500">
+            양력 생년월일을 입력하시면 정밀 만세력 테이블로 음력 날짜와 윤달 여부를 자동 변환합니다.
+          </p>
+        </div>
+
+        <!-- 생년월일 -->
+        <div>
+          <label class="block text-sm font-semibold text-navy-800 mb-2">
+            생년월일 (1930~2026) <span class="text-crimson-600">*</span>
+          </label>
+          <div class="grid grid-cols-3 gap-2.5 sm:gap-3.5">
+            <select
+              id="birthYear"
+              aria-label="출생 연도"
+              class="hanji-select w-full rounded-xl bg-hanji-50 border border-hanji-400 px-3 sm:px-4 py-3 text-ink-900 text-sm sm:text-base focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition"
+            ></select>
+            <select
+              id="birthMonth"
+              aria-label="출생 월"
+              class="hanji-select w-full rounded-xl bg-hanji-50 border border-hanji-400 px-3 sm:px-4 py-3 text-ink-900 text-sm sm:text-base focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition"
+            ></select>
+            <select
+              id="birthDay"
+              aria-label="출생 일"
+              class="hanji-select w-full rounded-xl bg-hanji-50 border border-hanji-400 px-3 sm:px-4 py-3 text-ink-900 text-sm sm:text-base focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition"
+            ></select>
+          </div>
+          <p id="formError" class="hidden mt-2 text-xs text-crimson-600 font-medium"></p>
+        </div>
+
+        <!-- 태어난 시진 (자미두수 12궁 핵심 기준) -->
+        <div>
+          <label for="birthHour" class="block text-sm font-semibold text-navy-800 mb-2">
+            태어난 시진 (12지신 시간대) <span class="text-gold-700 text-xs font-normal">· 자미두수 명궁/신궁 배치 기준</span>
+          </label>
+          <select
+            id="birthHour"
+            class="hanji-select w-full rounded-xl bg-hanji-50 border border-hanji-400 px-4 py-3 text-ink-900 text-sm sm:text-base focus:outline-none focus:border-navy-800 focus:ring-2 focus:ring-navy-800/15 transition"
+          >
+            <option value="0">자시 (子時 · 쥐) 23:30 ~ 01:29</option>
+            <option value="1">축시 (丑時 · 소) 01:30 ~ 03:29</option>
+            <option value="2">인시 (寅時 · 호랑이) 03:30 ~ 05:29</option>
+            <option value="3">묘시 (卯時 · 토끼) 05:30 ~ 07:29</option>
+            <option value="4">진시 (辰時 · 용) 07:30 ~ 09:29</option>
+            <option value="5">사시 (巳時 · 뱀) 09:30 ~ 11:29</option>
+            <option value="6" selected>오시 (午時 · 말) 11:30 ~ 13:29 (기본/모름 시 권장)</option>
+            <option value="7">미시 (未時 · 양) 13:30 ~ 15:29</option>
+            <option value="8">신시 (申時 · 원숭이) 15:30 ~ 17:29</option>
+            <option value="9">유시 (酉時 · 닭) 17:30 ~ 19:29</option>
+            <option value="10">술시 (戌時 · 개) 19:30 ~ 21:29</option>
+            <option value="11">해시 (亥時 · 돼지) 21:30 ~ 23:29</option>
+          </select>
+        </div>
+
+        <!-- 제출 버튼 -->
+        <div class="pt-2">
+          <button
+            type="submit"
+            class="w-full py-4 px-6 rounded-xl font-bold text-base sm:text-lg tracking-wide text-white bg-navy-800 hover:bg-navy-900 active:scale-[0.99] transition-all shadow-lg shadow-navy-800/20 flex items-center justify-center gap-2.5 border border-gold-500/50"
+          >
+            <span>2027 정미년 통합 명리 리포트 열람하기</span>
+            <span class="text-gold-400 text-lg">☯</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- [2] 로딩 연출 섹션 -->
+    <section id="loadingSection" class="hidden report-card rounded-2xl p-10 sm:p-14 text-center max-w-2xl mx-auto no-print">
+      <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full border-2 border-gold-400/60 bagua-spin flex items-center justify-center">
+          <span class="absolute -top-3 text-navy-800 text-base">☰</span>
+          <span class="absolute top-3 right-3 text-gold-600 text-base">☱</span>
+          <span class="absolute -right-3 text-navy-800 text-base">☲</span>
+          <span class="absolute bottom-3 right-3 text-gold-600 text-base">☳</span>
+          <span class="absolute -bottom-3 text-navy-800 text-base">☴</span>
+          <span class="absolute bottom-3 left-3 text-gold-600 text-base">☵</span>
+          <span class="absolute -left-3 text-navy-800 text-base">☶</span>
+          <span class="absolute top-3 left-3 text-gold-600 text-base">☷</span>
+        </div>
+        <div class="absolute inset-4 rounded-full border border-dashed border-crimson-600/60 bagua-reverse"></div>
+        <div class="w-16 h-16 rounded-full bg-navy-800 border-2 border-gold-400 flex items-center justify-center shadow-md">
+          <span class="font-hanja text-gold-200 text-lg font-bold tracking-widest">丁未</span>
+        </div>
+      </div>
+
+      <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mb-2">
+        태현수 144괘와 자미두수 12궁 명반을 작성하고 있습니다
+      </h3>
+      <p class="text-sm text-ink-500">
+        정밀 음양력 변환 · 60갑자 일진 · 14주성·육길성·사살성 및 2027 정미년 사화성 안성 중입니다.
+      </p>
+    </section>
+
+    <!-- [3] 통합 리포트 결과 섹션 -->
+    <main id="resultSection" class="hidden space-y-6 sm:space-y-8 fade-slide-up">
+
+      <!-- 상단 고급 탭 바 + 빠른 액션 (Sticky) -->
+      <div class="sticky top-2 z-30 no-print">
+        <div class="bg-white/95 backdrop-blur-md border border-hanji-300 rounded-2xl shadow-md p-2.5 sm:p-3 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
+          <!-- 핵심 2대 모드 탭 -->
+          <div class="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-hanji-200 border border-hanji-300 flex-1">
+            <button
+              type="button"
+              id="modeTabTojeong"
+              class="py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all bg-navy-800 text-white shadow-sm flex items-center justify-center gap-1.5"
+            >
+              <span>2027 정통 토정비결</span>
+            </button>
+            <button
+              type="button"
+              id="modeTabZiwei"
+              class="py-2.5 px-3 rounded-lg text-xs sm:text-sm font-semibold transition-all text-ink-700 hover:text-navy-800 flex items-center justify-center gap-1.5"
+            >
+              <span>자미두수 12궁 명반</span>
+            </button>
+          </div>
+
+          <!-- 우측 빠른 액션 버튼 -->
+          <div class="flex items-center justify-end gap-1.5 shrink-0">
+            <button
+              type="button"
+              id="btnTopCopy"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-navy-800 bg-gold-100 border border-gold-400/50 hover:bg-gold-200 transition"
+            >
+              전체 복사
+            </button>
+            <button
+              type="button"
+              id="btnTopPrint"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-navy-800 bg-hanji-200 hover:bg-hanji-300 transition"
+            >
+              인쇄/PDF
+            </button>
+            <button
+              type="button"
+              id="btnTopReset"
+              class="px-3 py-2 rounded-lg text-xs font-semibold text-crimson-600 bg-crimson-100 hover:bg-crimson-600 hover:text-white transition"
+            >
+              다시 조회
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           [TAB 1] 2027 정미년 정통 토정비결 리포트 패널
+      =================================================================== -->
+      <div id="panelTojeong" class="space-y-7 sm:space-y-8">
+
+        <!-- 1-1. 대표 괘사 & 원문 풀이 (족자형 헤더) -->
+        <article class="scroll-frame rounded-2xl p-6 sm:p-9 print-break-avoid">
+          <div class="flex flex-wrap items-start justify-between gap-3 border-b border-hanji-300 pb-4 mb-6">
+            <div>
+              <p class="text-xs font-semibold tracking-[0.18em] text-gold-700 uppercase">2027 정미년(丁未年) 토정비결 본괘</p>
+              <p id="resUserMeta" class="text-sm sm:text-base font-semibold text-navy-800 mt-1"></p>
+              <p id="resLunarConverted" class="text-xs text-gold-700 mt-1"></p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="resGradeBadge" class="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-crimson-600 text-white shadow-sm"></span>
+              <span id="resGuaNumber" class="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-navy-800 text-gold-200"></span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div class="md:col-span-4 flex flex-col items-center justify-center p-5 rounded-xl bg-hanji-100 border border-hanji-300">
+              <div class="flex items-center gap-4 mb-2">
+                <div class="text-center">
+                  <span class="block text-[11px] text-ink-500 mb-1">상괘(上)</span>
+                  <span id="resUpperSymbol" class="text-4xl text-navy-800 leading-none">☰</span>
+                  <span id="resUpperName" class="block text-xs font-semibold text-navy-800 mt-1"></span>
+                </div>
+                <span class="text-gold-500 text-2xl font-serif">·</span>
+                <div class="text-center">
+                  <span class="block text-[11px] text-ink-500 mb-1">중괘(中)</span>
+                  <span id="resMiddleSymbol" class="text-4xl text-navy-700 leading-none">☲</span>
+                  <span id="resMiddleName" class="block text-xs font-semibold text-navy-800 mt-1"></span>
+                </div>
+              </div>
+              <div class="mt-2 pt-2 border-t border-hanji-300 w-full text-center">
+                <span id="resGuaDigits" class="text-xs font-bold text-gold-700 tracking-wider"></span>
+              </div>
+            </div>
+
+            <div class="md:col-span-8 text-center md:text-left">
+              <div class="flex flex-wrap items-baseline justify-center md:justify-start gap-2 mb-3">
+                <h2 id="resGuaTitle" class="font-serif text-2xl sm:text-3xl font-bold text-navy-800"></h2>
+                <span id="resGuaHanja" class="font-hanja text-xl sm:text-2xl text-gold-700 font-medium"></span>
+              </div>
+
+              <div class="p-4 sm:p-5 rounded-xl bg-hanji-100/90 border-l-4 border-crimson-600 text-left">
+                <p id="resPoemOriginal" class="font-hanja text-base sm:text-lg font-bold text-navy-900 tracking-wide leading-relaxed"></p>
+                <p id="resPoemMeaning" class="narrative-body text-sm sm:text-base text-ink-700 mt-2.5"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2027년 띠 궁합 -->
+          <div class="mt-6 pt-5 border-t border-hanji-300 flex flex-col sm:flex-row sm:items-start gap-3">
+            <div class="flex items-center gap-2 shrink-0">
+              <span id="resZodiacBadge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-navy-800 text-white"></span>
+              <span id="resCompatibilityBadge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gold-100 text-gold-700 border border-gold-400/50"></span>
+            </div>
+            <p id="resZodiacDesc" class="narrative-body text-sm text-ink-700"></p>
+          </div>
+        </article>
+
+        <!-- 1-2. 정통 태현수 산출 명식표 (접기/펼치기) -->
+        <article class="report-card rounded-2xl overflow-hidden print-break-avoid">
+          <button
+            type="button"
+            id="btnToggleFormula"
+            aria-expanded="false"
+            class="w-full px-6 sm:px-8 py-4 flex flex-wrap items-center justify-between gap-3 bg-navy-100/70 hover:bg-navy-100 transition text-left"
+          >
+            <div>
+              <span class="text-xs font-bold text-gold-700 tracking-widest">TAEHYEONSU FORMULA</span>
+              <h3 class="font-serif text-base sm:text-lg font-bold text-navy-800">정통 태현수(太玄數) 산출 명식표</h3>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span id="resCodeBadge" class="px-3 py-1 rounded-full bg-navy-800 text-gold-200 text-xs font-bold"></span>
+              <span id="formulaToggleIcon" class="text-navy-800 text-xs font-semibold px-2.5 py-1 rounded-md border border-navy-800/20 bg-white no-print">
+                펼치기 ▼
+              </span>
+            </div>
+          </button>
+
+          <div id="formulaBody" class="hidden p-6 sm:p-7 border-t border-hanji-300">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <!-- 상괘 -->
+              <div class="p-4 rounded-xl bg-hanji-50 border border-hanji-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold text-navy-800">상괘 (上卦 · 1~8)</span>
+                    <span id="formulaUpperRes" class="font-serif text-lg font-bold text-crimson-600"></span>
+                  </div>
+                  <p class="text-[11px] text-ink-500 mb-2.5">공식: (세수 + 태세수 14) ÷ 8</p>
+                  <div class="space-y-1 text-xs bg-white p-2.5 rounded-lg border border-hanji-200">
+                    <div class="flex justify-between">
+                      <span class="text-ink-500">2027 세수</span>
+                      <span id="formulaAge" class="font-semibold text-ink-900"></span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-ink-500">정미년 태세수</span>
+                      <span class="font-semibold text-navy-800">14 <span class="text-[11px] font-hanja text-ink-500">(丁6+未8)</span></span>
+                    </div>
+                  </div>
+                </div>
+                <p id="formulaUpperEq" class="mt-2.5 pt-2 border-t border-hanji-200 text-xs font-semibold text-gold-700 text-right"></p>
+              </div>
+
+              <!-- 중괘 -->
+              <div class="p-4 rounded-xl bg-hanji-50 border border-hanji-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold text-navy-800">중괘 (中卦 · 1~6)</span>
+                    <span id="formulaMiddleRes" class="font-serif text-lg font-bold text-crimson-600"></span>
+                  </div>
+                  <p class="text-[11px] text-ink-500 mb-2.5">공식: (2027 음력 월일수 + 월건수) ÷ 6</p>
+                  <div class="space-y-1 text-xs bg-white p-2.5 rounded-lg border border-hanji-200">
+                    <div class="flex justify-between">
+                      <span id="formulaMonthLabel" class="text-ink-500">2027 음력 생월</span>
+                      <span id="formulaMonthDays" class="font-semibold text-ink-900"></span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-ink-500">월건 간지 / 수</span>
+                      <span id="formulaWolgeon" class="font-semibold text-navy-800"></span>
+                    </div>
+                  </div>
+                </div>
+                <p id="formulaMiddleEq" class="mt-2.5 pt-2 border-t border-hanji-200 text-xs font-semibold text-gold-700 text-right"></p>
+              </div>
+
+              <!-- 하괘 -->
+              <div class="p-4 rounded-xl bg-hanji-50 border border-hanji-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold text-navy-800">하괘 (下卦 · 1~3)</span>
+                    <span id="formulaLowerRes" class="font-serif text-lg font-bold text-crimson-600"></span>
+                  </div>
+                  <p class="text-[11px] text-ink-500 mb-2.5">공식: (음력 생일 + 해당일 일진수) ÷ 3</p>
+                  <div class="space-y-1 text-xs bg-white p-2.5 rounded-lg border border-hanji-200">
+                    <div class="flex justify-between">
+                      <span class="text-ink-500">음력 생일</span>
+                      <span id="formulaLunarDay" class="font-semibold text-ink-900"></span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-ink-500">2027 대응 양력</span>
+                      <span id="formulaTargetSolar" class="font-semibold text-ink-700"></span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-ink-500">해당일 일진수</span>
+                      <span id="formulaIljin" class="font-semibold text-navy-800"></span>
+                    </div>
+                  </div>
+                </div>
+                <p id="formulaLowerEq" class="mt-2.5 pt-2 border-t border-hanji-200 text-xs font-semibold text-gold-700 text-right"></p>
+              </div>
+            </div>
+
+            <div id="dayAdjustNotice" class="hidden mb-3 p-3 rounded-xl bg-crimson-100 border border-crimson-500/30 text-xs text-crimson-700 leading-relaxed"></div>
+
+            <div class="p-3 rounded-xl bg-hanji-100 border border-hanji-300 text-xs text-ink-700 leading-relaxed">
+              <span class="font-bold text-navy-800">태현수(太玄數) 기준</span> ·
+              천간: 甲·己(9), 乙·庚(8), 丙·辛(7), 丁·壬(6), 戊·癸(5) /
+              지지: 子·午(9), 丑·未(8), 寅·申(7), 卯·酉(6), 辰·戌(5), 巳·亥(4) ·
+              나머지가 0이면 전통 법칙에 따라 각각 8, 6, 3으로 취합니다.
+            </div>
+          </div>
+        </article>
+
+        <!-- 1-3. 신수 총론 (3문단 정통 서사) -->
+        <article class="report-card rounded-2xl p-6 sm:p-9 print-break-avoid">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-hanji-300 pb-4 mb-6">
+            <div>
+              <span class="text-xs font-bold text-crimson-600 tracking-widest">SECTION 01 · 身數總論</span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mt-0.5">2027년 정미년 신수 총론</h3>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-ink-500 block">종합 신수 지수</span>
+              <span id="resTotalScoreBadge" class="font-serif text-2xl font-bold text-navy-800"></span>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 sm:p-5 rounded-xl bg-hanji-50 border border-hanji-200">
+              <h4 class="text-sm font-bold text-navy-800 flex items-center gap-2 mb-2">
+                <span class="w-5 h-5 rounded-full bg-navy-800 text-gold-200 text-xs flex items-center justify-center font-serif">一</span>
+                한 해의 큰 기운과 상·하반기 흐름
+              </h4>
+              <p id="overviewPara1" class="narrative-body text-sm sm:text-[15.5px] text-ink-900"></p>
+            </div>
+
+            <div class="p-4 sm:p-5 rounded-xl bg-hanji-50 border border-hanji-200">
+              <h4 class="text-sm font-bold text-navy-800 flex items-center gap-2 mb-2">
+                <span class="w-5 h-5 rounded-full bg-gold-600 text-white text-xs flex items-center justify-center font-serif">二</span>
+                기회를 잡기 위한 처세와 핵심 전환점
+              </h4>
+              <p id="overviewPara2" class="narrative-body text-sm sm:text-[15.5px] text-ink-900"></p>
+            </div>
+
+            <div class="p-4 sm:p-5 rounded-xl bg-hanji-50 border border-hanji-200">
+              <h4 class="text-sm font-bold text-navy-800 flex items-center gap-2 mb-2">
+                <span class="w-5 h-5 rounded-full bg-crimson-600 text-white text-xs flex items-center justify-center font-serif">三</span>
+                경계해야 할 변수와 마음가짐
+              </h4>
+              <p id="overviewPara3" class="narrative-body text-sm sm:text-[15.5px] text-ink-900"></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 1-4. 5대 분야별 심층 풀이 -->
+        <section class="space-y-4">
+          <div class="flex flex-wrap items-end justify-between gap-2 px-1">
+            <div>
+              <span class="text-xs font-bold text-crimson-600 tracking-widest">SECTION 02 · 分野別 詳解</span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mt-0.5">5대 분야별 심층 풀이</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-ink-500">재물·직장·가정·건강·귀인 개운법 상세 해석</p>
+          </div>
+          <div id="categoryCardsContainer" class="space-y-4"></div>
+        </section>
+
+        <!-- 1-5. 월별 세운 (정월~섣달) -->
+        <article class="report-card rounded-2xl p-6 sm:p-9">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-hanji-300 pb-4 mb-6">
+            <div>
+              <span class="text-xs font-bold text-crimson-600 tracking-widest">SECTION 03 · 月別 歲運</span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mt-0.5">2027년 월별 세운 (정월 ~ 섣달)</h3>
+              <p class="text-xs sm:text-sm text-ink-500 mt-1">정미년 열두 달의 월건(月建) 기운에 따른 달별 처세와 길흉 풀이입니다.</p>
+            </div>
+
+            <div class="inline-flex p-1 rounded-xl bg-hanji-200 border border-hanji-300 self-start sm:self-auto no-print">
+              <button type="button" id="tabAllMonths" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-navy-800 text-white shadow-sm">
+                전체 (1~12월)
+              </button>
+              <button type="button" id="tabFirstHalf" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition text-ink-700 hover:text-navy-800">
+                상반기
+              </button>
+              <button type="button" id="tabSecondHalf" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition text-ink-700 hover:text-navy-800">
+                하반기
+              </button>
+            </div>
+          </div>
+
+          <div id="monthlyGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </article>
+      </div>
+
+      <!-- ===================================================================
+           [TAB 2] 자미두수(紫微斗數) 12궁 방형 명반 & 2027 정미년 유년 풀이 패널
+      =================================================================== -->
+      <div id="panelZiwei" class="hidden space-y-7 sm:space-y-8">
+
+        <!-- 2-1. 4×4 전통 방형 명반 카드 -->
+        <article class="report-card rounded-2xl p-5 sm:p-8 print-break-avoid">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-hanji-300 pb-4 mb-5">
+            <div>
+              <span class="text-xs font-bold text-crimson-600 tracking-widest">ZI WEI DOU SHU · 紫微斗數 命盤</span>
+              <h2 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mt-0.5">전통 12궁 방형 명반 (2027 정미년 유년 연동)</h2>
+              <p class="text-xs sm:text-sm text-ink-500 mt-1">
+                어느 궁이든 클릭하시면 <strong class="text-crimson-600">본궁</strong>·<strong class="text-navy-800">대궁(對宮)</strong>·<strong class="text-gold-700">삼합(三合)</strong>의 삼방사정(三方四正)이 하이라이트되며 하단 상세 해설이 즉시 갱신됩니다.
+              </p>
+            </div>
+
+            <!-- 사화성 범례 -->
+            <div class="flex flex-wrap items-center gap-1.5 text-[11px] bg-hanji-100 px-3 py-2 rounded-xl border border-hanji-300">
+              <span class="font-semibold text-navy-800 mr-1">생년사화:</span>
+              <span class="sihua-badge sh-natal-lu">祿</span>
+              <span class="sihua-badge sh-natal-qu">權</span>
+              <span class="sihua-badge sh-natal-ke">科</span>
+              <span class="sihua-badge sh-natal-ji">忌</span>
+              <span class="mx-1 text-hanji-400">|</span>
+              <span class="font-semibold text-crimson-600 mr-1">2027유년:</span>
+              <span class="sihua-badge sh-flow-lu">流祿</span>
+              <span class="sihua-badge sh-flow-qu">流權</span>
+              <span class="sihua-badge sh-flow-ke">流科</span>
+              <span class="sihua-badge sh-flow-ji">流忌</span>
+            </div>
+          </div>
+
+          <!-- 모바일 가로 스크롤 안내 -->
+          <p class="sm:hidden text-[11px] text-gold-700 mb-2 flex items-center gap-1 no-print">
+            <span>↔ 좌우로 스와이프하여 4×4 전통 방형 명반 전체를 확인하세요.</span>
+          </p>
+
+          <!-- 4×4 전통 명반 컨테이너 -->
+          <div class="zw-scroll-wrap overflow-x-auto pb-2">
+            <div id="ziweiChartGrid" class="zw-grid min-w-[660px] rounded-lg overflow-hidden shadow-inner"></div>
+          </div>
+
+          <!-- 인터랙티브 선택 궁위 상세 해설 패널 -->
+          <div id="ziweiPalaceInspector" class="mt-5 p-5 rounded-xl bg-hanji-50 border border-gold-400/60">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-hanji-300 pb-3 mb-3">
+              <div class="flex flex-wrap items-center gap-2">
+                <span id="inspPalaceTitle" class="font-serif text-lg font-bold text-navy-800"></span>
+                <span id="inspPalaceGanZhi" class="text-xs font-hanja px-2.5 py-0.5 rounded-full bg-navy-800 text-gold-200 font-semibold"></span>
+                <span id="inspFlowPalace" class="text-xs px-2.5 py-0.5 rounded-full bg-gold-100 text-gold-700 border border-gold-400/50 font-semibold"></span>
+              </div>
+              <span id="inspSanfangSummary" class="text-xs text-ink-500"></span>
+            </div>
+            <div id="inspStarList" class="flex flex-wrap gap-2 mb-3"></div>
+            <p id="inspDesc" class="narrative-body text-sm text-ink-900"></p>
+          </div>
+        </article>
+
+        <!-- 2-2. [자미두수 리포트 1] 명궁 주성 성향 및 타고난 기질 풀이 -->
+        <article class="report-card rounded-2xl p-6 sm:p-9 print-break-avoid">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-hanji-300 pb-4 mb-6">
+            <div>
+              <span class="text-xs font-bold text-crimson-600 tracking-widest">ZIWEI REPORT 01 · 本命 格局</span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mt-0.5">명궁 주성 성향 및 타고난 기질 풀이</h3>
+            </div>
+            <span id="zwMingStarsBadge" class="px-3.5 py-1.5 rounded-full bg-navy-800 text-gold-200 text-xs sm:text-sm font-bold"></span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 sm:p-5 rounded-xl bg-hanji-50 border border-hanji-200">
+              <h4 class="text-sm font-bold text-navy-800 flex items-center gap-2 mb-2">
+                <span class="w-5 h-5 rounded-full bg-navy-800 text-gold-200 text-xs flex items-center justify-center font-serif">命</span>
+                <span id="zwMingSubTitle">명궁(命宮) 주성의 타고난 기질과 그릇</span>
+              </h4>
+              <p id="zwMingNarrative" class="narrative-body text-sm sm:text-[15.5px] text-ink-900"></p>
+            </div>
+
+            <div class="p-4 sm:p-5 rounded-xl bg-hanji-50 border border-hanji-200">
+              <h4 class="text-sm font-bold text-navy-800 flex items-center gap-2 mb-2">
+                <span class="w-5 h-5 rounded-full bg-gold-600 text-white text-xs flex items-center justify-center font-serif">身</span>
+                <span id="zwShenSubTitle">신궁(身宮)이 가리키는 인생 후반의 중심축</span>
+              </h4>
+              <p id="zwShenNarrative" class="narrative-body text-sm sm:text-[15.5px] text-ink-900"></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2-3. [자미두수 리포트 2] 2027 정미년 유년 사화성 4대 핵심 포인트 분석 -->
+        <article class="report-card rounded-2xl p-6 sm:p-9 print-break-avoid">
+          <div class="border-b border-hanji-300 pb-4 mb-6">
+            <span class="text-xs font-bold text-crimson-600 tracking-widest">ZIWEI REPORT 02 · 丁未年 四化星</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mt-0.5">2027년 정미년 유년 사화성(四化星) 4대 핵심 포인트</h3>
+            <p class="text-xs sm:text-sm text-ink-500 mt-1">
+              정미년 천간 정(丁)의 기운이 명반 속 네 별을 깨워 <strong>태음 화록 · 천동 화권 · 천기 화과 · 거문 화기</strong>로 작용하는 정확한 궁위와 실전 처세입니다.
+            </p>
+          </div>
+
+          <div id="zwFlowSihuaCards" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </article>
+
+        <!-- 2-4. [자미두수 리포트 3] 2027 유년 삼방사정 (未·卯·亥) 종합 운세 & 개운 전략 -->
+        <article class="report-card rounded-2xl p-6 sm:p-9 print-break-avoid">
+          <div class="border-b border-hanji-300 pb-4 mb-6">
+            <span class="text-xs font-bold text-crimson-600 tracking-widest">ZIWEI REPORT 03 · 2027 流年 三方四正</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800 mt-0.5">2027년 유년 삼방사정 (未·卯·亥) 종합 운세</h3>
+            <p class="text-xs sm:text-sm text-ink-500 mt-1">
+              2027년 유년 명궁은 <strong class="text-navy-800">미궁(未宮)</strong>에 자리하며, 삼합을 이루는 <strong class="text-navy-800">묘궁(卯宮 · 유년 재백궁)</strong>과 <strong class="text-navy-800">해궁(亥宮 · 유년 관록궁)</strong>의 별들이 한 해의 성패를 좌우합니다.
+            </p>
+          </div>
+
+          <div id="zwFlowThreePalaces" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+        </article>
+
+        <!-- 2-5. 토정비결 × 자미두수 종합 개운 전략 -->
+        <article class="scroll-frame rounded-2xl p-6 sm:p-9 print-break-avoid">
+          <div class="flex items-center gap-3 border-b border-hanji-300 pb-4 mb-5">
+            <span class="w-9 h-9 rounded-lg bg-crimson-600 text-white font-hanja font-bold text-base flex items-center justify-center shrink-0">合</span>
+            <div>
+              <span class="text-xs font-bold text-gold-700 tracking-widest">FINAL SYNTHESIS · 秘訣 × 斗數</span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-800">2027년 정미년 토정비결 × 자미두수 종합 개운 전략</h3>
+            </div>
+          </div>
+          <p id="zwSynthesisText" class="narrative-body text-sm sm:text-base text-ink-900"></p>
+        </article>
+      </div>
+
+      <!-- 하단 통합 액션 버튼 -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 no-print">
+        <button
+          type="button"
+          id="btnCopyFullReport"
+          class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-navy-800 hover:bg-navy-900 active:scale-[0.99] transition shadow-md"
+        >
+          통합 리포트 전체 복사
+        </button>
+        <button
+          type="button"
+          id="btnPrintReport"
+          class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base text-navy-800 bg-gold-100 border border-gold-500/60 hover:bg-gold-200 active:scale-[0.99] transition"
+        >
+          인쇄 / PDF 저장
+        </button>
+        <button
+          type="button"
+          id="btnReset"
+          class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-ink-700 bg-white border border-hanji-400 hover:bg-hanji-200 active:scale-[0.99] transition"
+        >
+          다른 사주 조회하기
+        </button>
+      </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="mt-12 pt-6 border-t border-hanji-300 text-center text-xs text-ink-500 space-y-1">
+      <p>1930~2027 정밀 음양력 변환기 · 전통 태현수(太玄數) 144괘 · 자미두수(紫微斗數) 14주성·육길성·사살성·사화성 정통 안성법 적용</p>
+      <p>© 2027 정미년(丁未年) 정통 토정비결 × 자미두수 통합 명리 리포트 · 새해 만복이 깃드시기를 기원합니다.</p>
+    </footer>
+  </div>
+
+  <!-- 토스트 알림 (alert 미사용) -->
+  <div
+    id="toastMessage"
+    role="status"
+    aria-live="polite"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-xl bg-navy-900 border border-gold-400 text-white text-sm shadow-xl flex items-center gap-2.5 opacity-0 pointer-events-none transition-all duration-300 translate-y-3 no-print"
+  >
+    <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+    <span id="toastText">복사되었습니다.</span>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* =====================================================================
+         [ENGINE 1] 정밀 한국 음양력 변환기 (1900~2035년 비트마스크 테이블)
+         - 한국천문연구원(KASI) 음력 데이터 기준 (중국 음력과 차이 나는 해 반영)
+         - bit 0~3  : 윤달 월 (0=없음, 1~12=윤월)
+         - bit 4~15 : 음력 1~12월 대소월 (1=30일, 0=29일; 0x8000 >> (m-1))
+         - bit 16   : 윤달 대소월 (1=30일, 0=29일)
+         - 기준일   : 음력 1900년 1월 1일 = 양력 1900년 1월 31일
+      ===================================================================== */
+      const LUNAR_INFO = [
+        0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2, // 1900-1909
+        0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x0da95,0x0b550,0x056a0,0x0ada2,0x095d0,0x04bb7, // 1910-1919
+        0x049b0,0x0a4b0,0x0b4b5,0x06a90,0x0ad40,0x0bb54,0x02b60,0x095b0,0x05372,0x04970, // 1920-1929
+        0x06566,0x0e4a0,0x0ea50,0x16a95,0x05b50,0x02b60,0x18ae3,0x092e0,0x1c8d7,0x0c950, // 1930-1939
+        0x0d4a0,0x1d8a6,0x0b690,0x056d0,0x125b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0d557, // 1940-1949
+        0x0b4a0,0x0b550,0x15555,0x04db0,0x025b0,0x18573,0x052b0,0x0a9b8,0x06950,0x06aa0, // 1950-1959
+        0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05270,0x07263,0x0d950,0x06b57,0x056a0, // 1960-1969
+        0x09ad0,0x04dd5,0x04ae0,0x0a4e0,0x0d4d4,0x0d250,0x0d598,0x0b540,0x0d6a0,0x195a6, // 1970-1979
+        0x095b0,0x049b0,0x0a9b4,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0b756,0x02b60,0x095b0, // 1980-1989
+        0x04b75,0x04970,0x064b0,0x074a3,0x0ea50,0x06d98,0x05ad0,0x02b60,0x096e5,0x092e0, // 1990-1999
+        0x0c960,0x0e954,0x0d4a0,0x0da50,0x07552,0x056c0,0x0abb7,0x025d0,0x092d0,0x0cab5, // 2000-2009
+        0x0a950,0x0b4a0,0x1b4a3,0x0b550,0x055d9,0x04ba0,0x0a5b0,0x05575,0x052b0,0x0a950, // 2010-2019
+        0x0b954,0x06aa0,0x0ad50,0x06b52,0x04b60,0x0a6e6,0x0a570,0x05270,0x06a65,0x0d930, // 2020-2029
+        0x05aa0,0x0b6a3,0x096d0,0x04afb,0x04ae0,0x0a4d0 // 2030-2035
+      ];
+
+      const LUNAR_MIN_YEAR = 1900;
+      const LUNAR_MAX_YEAR = 2035;
+      const DAY_MS = 86400000;
+      const BASE_UTC = Date.UTC(1900, 0, 31);
+
+      function leapMonth(y) { return LUNAR_INFO[y - LUNAR_MIN_YEAR] & 0xf; }
+      function leapDays(y) { return leapMonth(y) ? ((LUNAR_INFO[y - LUNAR_MIN_YEAR] & 0x10000) ? 30 : 29) : 0; }
+      function monthDays(y, m) { return (LUNAR_INFO[y - LUNAR_MIN_YEAR] & (0x8000 >> (m - 1))) ? 30 : 29; }
+      function lunarYearDays(y) {
+        let sum = 0;
+        for (let m = 1; m <= 12; m++) sum += monthDays(y, m);
+        return sum + leapDays(y);
+      }
+      function lunarMonthLength(y, m, isLeap) { return isLeap ? leapDays(y) : monthDays(y, m); }
+      function solarMonthDays(y, m) { return new Date(Date.UTC(y, m, 0)).getUTCDate(); }
+
+      /** 양력 → 음력 */
+      function solarToLunar(y, m, d) {
+        let offset = Math.round((Date.UTC(y, m - 1, d) - BASE_UTC) / DAY_MS);
+        if (offset < 0) return null;
+        let ly = LUNAR_MIN_YEAR;
+        while (ly <= LUNAR_MAX_YEAR) {
+          const yd = lunarYearDays(ly);
+          if (offset < yd) break;
+          offset -= yd;
+          ly++;
+        }
+        if (ly > LUNAR_MAX_YEAR) return null;
+        const lm = leapMonth(ly);
+        for (let mm = 1; mm <= 12; mm++) {
+          let md = monthDays(ly, mm);
+          if (offset < md) return { year: ly, month: mm, day: offset + 1, isLeap: false };
+          offset -= md;
+          if (mm === lm) {
+            md = leapDays(ly);
+            if (offset < md) return { year: ly, month: mm, day: offset + 1, isLeap: true };
+            offset -= md;
+          }
+        }
+        return null;
+      }
+
+      /** 음력 → 양력 */
+      function lunarToSolar(y, m, d, isLeap) {
+        if (y < LUNAR_MIN_YEAR || y > LUNAR_MAX_YEAR || m < 1 || m > 12) return null;
+        if (isLeap && leapMonth(y) !== m) return null;
+        if (d < 1 || d > lunarMonthLength(y, m, isLeap)) return null;
+        let offset = 0;
+        for (let yy = LUNAR_MIN_YEAR; yy < y; yy++) offset += lunarYearDays(yy);
+        const lm = leapMonth(y);
+        for (let mm = 1; mm < m; mm++) {
+          offset += monthDays(y, mm);
+          if (mm === lm) offset += leapDays(y);
+        }
+        if (isLeap) offset += monthDays(y, m);
+        offset += d - 1;
+        const t = new Date(BASE_UTC + offset * DAY_MS);
+        return { year: t.getUTCFullYear(), month: t.getUTCMonth() + 1, day: t.getUTCDate() };
+      }
+
+      /* =====================================================================
+         [ENGINE 2] 60갑자 · 태현수
+      ===================================================================== */
+      const STEMS = '甲乙丙丁戊己庚辛壬癸';
+      const STEMS_KO = '갑을병정무기경신임계';
+      const BRANCHES = '子丑寅卯辰巳午未申酉戌亥';
+      const BRANCHES_KO = '자축인묘진사오미신유술해';
+      const ZODIAC_KO = ['쥐', '소', '호랑이', '토끼', '용', '뱀', '말', '양', '원숭이', '닭', '개', '돼지'];
+      const HOUR_KO = ['자시(子時)', '축시(丑時)', '인시(寅時)', '묘시(卯時)', '진시(辰時)', '사시(巳時)', '오시(午時)', '미시(未時)', '신시(申時)', '유시(酉時)', '술시(戌時)', '해시(亥時)'];
+      const MONTH_KO = ['정월', '이월', '삼월', '사월', '오월', '유월', '칠월', '팔월', '구월', '시월', '동짓달', '섣달'];
+      const TH_STEM = [9, 8, 7, 6, 5, 9, 8, 7, 6, 5];
+      const TH_BRANCH = [9, 8, 7, 6, 5, 4, 9, 8, 7, 6, 5, 4];
+
+      const TARGET_YEAR = 2027;
+      const TARGET_BRANCH = 7; // 未
+      const TAESE_SU = TH_STEM[3] + TH_BRANCH[7]; // 丁6 + 未8 = 14
+
+      function mod(n, m) { return ((n % m) + m) % m; }
+      function yearStem(y) { return mod(y - 4, 10); }
+      function yearBranch(y) { return mod(y - 4, 12); }
+      /** 오호둔(五虎遁): 연간에 따른 정월(寅月) 천간 */
+      function firstMonthStem(ys) { return mod((ys % 5) * 2 + 2, 10); }
+      /** 1970-01-01 = 辛巳日(17) 기준 일진 */
+      function dayGanzhiIndex(y, m, d) {
+        const dn = Math.round(Date.UTC(y, m - 1, d) / DAY_MS);
+        return mod(dn + 17, 60);
+      }
+      function gz60(s, b) { return mod(6 * s - 5 * b, 60); }
+      function gzStr(s, b) { return STEMS[s] + BRANCHES[b]; }
+      function gzKo(s, b) { return STEMS_KO[s] + BRANCHES_KO[b]; }
+
+      /** 결정론적 해시 (같은 사주 → 항상 같은 결과) */
+      function hash(a, b) {
+        let x = (Math.imul(a + 1, 2654435761) ^ Math.imul(b + 7, 40503)) >>> 0;
+        x ^= x >>> 13;
+        x = Math.imul(x, 0x5bd1e995) >>> 0;
+        x ^= x >>> 15;
+        return x >>> 0;
+      }
+      function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      }
+
+      /* =====================================================================
+         [DATA 1] 토정비결 144괘 (괘번호|괘사|괘명|풀이|등급 0=대길~4=근신)
+         ※ 전통 토정비결의 상징 체계를 따라 새로 지은 괘사입니다.
+      ===================================================================== */
+      const GUA_RAW = `
+111|東風解凍 枯木逢春|동풍해동|동풍에 얼음이 풀리고 마른 나무가 봄을 만나니, 오래 막혔던 일이 풀리고 새 기운이 돋습니다.|0
+112|龍得明珠 造化無窮|용득명주|용이 여의주를 얻은 격이니 재주를 마음껏 펼쳐 이름과 재물을 함께 얻습니다.|0
+113|春回大地 萬物生光|춘회대지|봄이 대지에 돌아와 만물이 빛나니 뜻한 일이 차례로 이루어집니다.|1
+121|雲中明月 時隱時現|운중명월|구름 속 밝은 달이 숨었다 나타났다 하니 길흉이 번갈아 찾아옵니다.|2
+122|鳳鳴朝陽 貴人相助|봉명조양|아침 해에 봉황이 우니 귀인이 돕고 명예가 따릅니다.|0
+123|平地風波 先困後泰|평지풍파|평지에 풍파가 이니 처음은 고단하나 뒤에는 태평합니다.|2
+131|猛虎出林 威振四方|맹호출림|사나운 범이 숲을 나서니 위엄이 사방에 떨칩니다. 다만 지나친 기세는 다툼을 부릅니다.|1
+132|金烏入雲 守舊安靜|금오입운|해가 구름 속에 드니 옛것을 지키고 고요히 있어야 편안합니다.|3
+133|錦上添花 喜事重重|금상첨화|비단 위에 꽃을 더하니 경사가 겹겹이 찾아옵니다.|0
+141|孤舟遠浦 獨坐無伴|고주원포|먼 포구의 외로운 배라, 의지할 곳 없이 홀로 애쓰니 인내가 필요합니다.|3
+142|深山採玉 勞而有功|심산채옥|깊은 산에서 옥을 캐니 수고한 끝에 반드시 공이 있습니다.|1
+143|春草逢霜 意外損財|춘초봉상|봄풀이 서리를 만나니 뜻밖의 손재를 조심해야 합니다.|4
+151|靑鳥傳信 遠方喜報|청조전신|파랑새가 소식을 전하니 먼 곳에서 기쁜 소식이 옵니다.|1
+152|鶴立鷄群 名振一鄕|학립계군|닭 무리 속의 학이라 재능이 드러나 이름을 떨칩니다.|0
+153|夜行失燭 進退兩難|야행실촉|밤길에 등불을 잃으니 나아가고 물러섬이 모두 어렵습니다.|4
+161|春水滿澤 魚龍得意|춘수만택|봄물이 못에 가득하니 물고기와 용이 뜻을 얻습니다.|0
+162|臨淵羨魚 不如結網|임연선어|못가에서 고기를 탐하느니 돌아가 그물을 짜는 편이 낫습니다. 준비가 먼저입니다.|2
+163|枯井生泉 晩來福祿|고정생천|마른 우물에 샘이 솟으니 늦게 복록이 찾아옵니다.|1
+211|花開滿園 蜂蝶自來|화개만원|꽃이 동산에 가득 피니 벌과 나비가 절로 모이듯 사람과 재물이 따릅니다.|0
+212|雨後靑山 一新面目|우후청산|비 갠 뒤의 푸른 산이라 묵은 근심을 씻고 새 면모를 얻습니다.|1
+213|浮雲蔽日 是非紛紛|부운폐일|뜬구름이 해를 가리니 구설과 시비가 어지럽습니다.|3
+221|順風擧帆 一日千里|순풍거범|순풍에 돛을 올리니 하루에 천 리를 갑니다.|0
+222|杯中蛇影 疑心生病|배중사영|잔 속의 뱀 그림자라, 의심이 병을 만드니 마음을 넓게 가져야 합니다.|3
+223|守株待兎 勞而無功|수주대토|그루터기를 지키며 토끼를 기다리니 애써도 공이 없습니다. 방법을 바꾸십시오.|3
+231|旱苗得雨 生氣自新|한묘득우|가문 싹이 비를 얻으니 생기가 절로 새롭습니다.|0
+232|半天明月 半有雲遮|반천명월|하늘 반은 밝은 달이요 반은 구름이라 길흉이 반반입니다.|2
+233|鷄鳴狗吠 家宅不安|계명구폐|닭이 울고 개가 짖으니 집안이 편치 않습니다.|4
+241|老龍得水 再起東山|노룡득수|늙은 용이 물을 얻으니 다시 일어서는 기회가 옵니다.|1
+242|細雨春林 萬物資生|세우춘림|가랑비 내리는 봄 숲이라 만물이 자라니 꾸준함이 복이 됩니다.|1
+243|落花流水 有情無情|낙화유수|지는 꽃과 흐르는 물이라 인연이 엇갈리니 마음을 다잡아야 합니다.|3
+251|積小成大 家道漸興|적소성대|작은 것을 쌓아 크게 이루니 가세가 점점 일어납니다.|1
+252|山高水長 遠行有利|산고수장|산 높고 물이 기니 먼 길에 이로움이 있습니다.|1
+253|風前燈火 謹愼保身|풍전등화|바람 앞의 등불이라 몸을 삼가 지켜야 합니다.|4
+261|玉兎東昇 淸光萬里|옥토동승|옥토끼가 동쪽에 오르니 맑은 빛이 만 리에 비칩니다.|0
+262|舊巢燕歸 安家樂業|구소연귀|제비가 옛 둥지로 돌아오니 집이 편하고 생업이 즐겁습니다.|1
+263|隔岸觀火 守靜爲吉|격안관화|강 건너 불구경이라, 남의 일에 끼어들지 말고 고요히 지키면 길합니다.|2
+311|日出東方 光明普照|일출동방|해가 동방에서 솟으니 밝은 빛이 두루 비칩니다.|0
+312|火中生蓮 轉禍爲福|화중생련|불 속에서 연꽃이 피니 화가 바뀌어 복이 됩니다.|1
+313|渴龍失水 求而不得|갈룡실수|목마른 용이 물을 잃으니 구해도 얻지 못합니다.|4
+321|千里有緣 喜逢知己|천리유연|천 리 밖에도 인연이 있어 지기(知己)를 반갑게 만납니다.|1
+322|登山望海 志大力微|등산망해|산에 올라 바다를 바라보니 뜻은 크나 힘이 미치지 못합니다. 분수를 지키십시오.|3
+323|雪中松柏 獨守其節|설중송백|눈 속의 송백이라 홀로 절개를 지키니 끝내 인정받습니다.|2
+331|錦衣還鄕 光耀門楣|금의환향|비단옷 입고 고향에 돌아가니 집안을 빛냅니다.|0
+332|船到江心 補漏已遲|선도강심|배가 강 한가운데서야 새는 곳을 막으려 하니 늦습니다. 미리 대비하십시오.|4
+333|春風得意 馬蹄自輕|춘풍득의|봄바람에 뜻을 얻으니 말발굽이 절로 가볍습니다.|0
+341|暗室逢燈 前程漸明|암실봉등|어두운 방에서 등불을 만나니 앞길이 점점 밝아집니다.|1
+342|一喜一悲 得失相半|일희일비|한 번 기쁘고 한 번 슬프니 얻고 잃음이 반반입니다.|2
+343|秋扇見捐 人情冷淡|추선견연|가을 부채처럼 버려지니 인정이 냉담합니다. 스스로 힘을 길러야 합니다.|3
+351|鯉魚登門 化爲靑龍|이어등문|잉어가 용문에 오르니 푸른 용으로 변합니다. 승진과 합격의 운입니다.|0
+352|晝耕夜讀 苦盡甘來|주경야독|낮에 밭 갈고 밤에 글 읽으니 고생 끝에 낙이 옵니다.|1
+353|猿猴失枝 身無所依|원후실지|원숭이가 가지를 잃으니 몸 둘 곳이 마땅치 않습니다.|4
+361|好事多魔 愼終如始|호사다마|좋은 일에 마가 끼기 쉬우니 끝을 처음처럼 삼가십시오.|2
+362|金入鎔爐 成器有日|금입용로|쇠가 용광로에 드니 그릇을 이룰 날이 머지않습니다.|1
+363|水上浮萍 東西漂泊|수상부평|물 위의 부평초라 동서로 떠도니 정처가 없습니다.|3
+411|雷動九天 聲聞四海|뇌동구천|우레가 하늘을 울리니 이름이 사해에 들립니다.|0
+412|鳥飛出籠 自由自在|조비출롱|새가 새장을 나와 나니 얽매임에서 벗어납니다.|1
+413|驚弓之鳥 疑懼不安|경궁지조|활에 놀란 새라 의심과 두려움이 많으니 마음을 다스려야 합니다.|3
+421|枯木回春 枝葉更新|고목회춘|마른 나무에 봄이 돌아와 가지와 잎이 새로워집니다.|1
+422|家有餘慶 子孫昌盛|가유여경|집에 경사가 넘치니 자손이 번창합니다.|0
+423|刻舟求劍 固執生害|각주구검|배에 표시하고 칼을 찾으니 고집이 해를 부릅니다.|3
+431|梧桐棲鳳 必有吉兆|오동서봉|오동나무에 봉황이 깃드니 반드시 길조가 있습니다.|0
+432|東奔西走 有勞無益|동분서주|동서로 분주하나 수고만 있고 이익이 적습니다.|3
+433|一竿風月 心閑身安|일간풍월|낚싯대 하나에 바람과 달이라 마음 한가하고 몸이 편합니다.|2
+441|狂風驟雨 落花滿地|광풍취우|미친 바람과 소나기에 꽃이 땅에 가득 지니 손실을 조심하십시오.|4
+442|久旱逢雨 枯苗復蘇|구한봉우|오랜 가뭄에 비를 만나니 마른 싹이 다시 살아납니다.|1
+443|千辛萬苦 終見成功|천신만고|천신만고 끝에 마침내 성공을 봅니다.|2
+451|魚躍于淵 得其所願|어약우연|물고기가 못에서 뛰노니 원하는 바를 얻습니다.|1
+452|虎落平陽 被犬所欺|호락평양|범이 들판에 내려와 개에게 업신여김을 당하니 때를 기다려야 합니다.|4
+453|百花爭春 各有其時|백화쟁춘|온갖 꽃이 봄을 다투나 저마다 때가 있으니 조급해하지 마십시오.|2
+461|鴻雁傳書 遠人有信|홍안전서|기러기가 편지를 전하니 먼 사람에게서 반가운 소식이 옵니다.|1
+462|一石二鳥 所求如意|일석이조|돌 하나로 새 두 마리를 잡으니 구하는 바가 뜻대로 됩니다.|0
+463|井底觀天 見識狹小|정저관천|우물 밑에서 하늘을 보니 견문이 좁습니다. 널리 배우고 물으십시오.|3
+511|和風細雨 萬事亨通|화풍세우|온화한 바람과 가는 비에 만사가 형통합니다.|0
+512|蛟龍得雲 終非池中|교룡득운|교룡이 구름을 얻으니 끝내 연못 속에 머물 몸이 아닙니다.|0
+513|柳絮隨風 心無定處|유서수풍|버들솜이 바람 따라 날리니 마음이 정처 없습니다.|3
+521|竹報平安 家內和樂|죽보평안|대나무가 평안을 알리니 집안이 화목합니다.|1
+522|欲速不達 寬心待時|욕속부달|서두르면 이루지 못하니 마음을 넉넉히 하고 때를 기다리십시오.|2
+523|蝶入蛛網 謹防陷害|접입주망|나비가 거미줄에 드니 모함과 함정을 조심해야 합니다.|4
+531|春蠶作繭 勤勉致富|춘잠작견|봄누에가 고치를 지으니 부지런함으로 부를 이룹니다.|1
+532|明珠出海 光彩照人|명주출해|밝은 구슬이 바다에서 나오니 빛이 사람을 비춥니다.|0
+533|秋風落葉 凄涼孤寂|추풍낙엽|가을바람에 잎이 지니 쓸쓸하고 외롭습니다.|4
+541|雨霽雲收 月明千里|우제운수|비 개고 구름 걷히니 달이 천 리를 밝힙니다.|1
+542|進一退一 小得小失|진일퇴일|한 걸음 나아가고 한 걸음 물러서니 작게 얻고 작게 잃습니다.|2
+543|舟行逆水 用力倍多|주행역수|배가 물을 거슬러 가니 힘이 곱절로 듭니다.|3
+551|蓮花出水 淸香遠聞|연화출수|연꽃이 물 위로 나오니 맑은 향이 멀리 퍼집니다.|0
+552|老馬識途 經驗爲寶|노마식도|늙은 말이 길을 아니 경험이 곧 보배입니다.|1
+553|霜降草衰 宜守舊業|상강초쇠|서리 내려 풀이 시드니 옛 업을 지킴이 마땅합니다.|3
+561|野鶴閑雲 淸福自在|야학한운|들판의 학과 한가한 구름이라 맑은 복이 절로 있습니다.|1
+562|畵餠充飢 虛名無實|화병충기|그림의 떡으로 배를 채우니 헛된 이름에 실속이 없습니다.|3
+563|花落結實 先苦後甘|화락결실|꽃이 져야 열매를 맺으니 먼저 쓰고 뒤에 답니다.|2
+611|江水東流 不舍晝夜|강수동류|강물이 밤낮을 쉬지 않고 동으로 흐르니 꾸준함이 큰 성취를 부릅니다.|1
+612|寒谷回春 陰極陽生|한곡회춘|차가운 골짜기에 봄이 돌아오니 음이 다하고 양이 생겨납니다.|1
+613|泥中陷車 進退維谷|이중함거|진흙에 수레가 빠지니 진퇴양난입니다.|4
+621|魚游春水 自得其樂|어유춘수|물고기가 봄물에 노니 스스로 즐거움을 얻습니다.|1
+622|月落烏啼 愁思滿懷|월락오제|달 지고 까마귀 우니 시름이 가슴에 가득합니다.|4
+623|以和爲貴 衆人相扶|이화위귀|화합을 귀히 여기니 여러 사람이 서로 돕습니다.|2
+631|滄海遺珠 終得其用|창해유주|바다에 버려진 구슬이 끝내 쓰임을 얻습니다.|1
+632|一波未平 一波又起|일파미평|한 물결이 잦기도 전에 또 한 물결이 이니 일이 겹칩니다.|4
+633|金石之交 友誼長存|금석지교|쇠와 돌 같은 사귐이라 우정이 오래갑니다.|2
+641|大海行舟 風平浪靜|대해행주|큰 바다에 배를 띄우니 바람 자고 물결이 고요합니다.|0
+642|石上栽花 根基不固|석상재화|돌 위에 꽃을 심으니 뿌리가 굳지 못합니다. 기반부터 다지십시오.|3
+643|飛龍在天 利見大人|비룡재천|나는 용이 하늘에 있으니 대인을 만나 이롭습니다.|0
+651|水到渠成 自然有成|수도거성|물이 이르면 도랑이 생기듯 때가 되면 절로 이루어집니다.|1
+652|夜雨孤燈 憂中有喜|야우고등|밤비에 외로운 등불이나 근심 속에 기쁨이 숨어 있습니다.|2
+653|盲人瞎馬 臨深履薄|맹인할마|눈먼 사람이 눈먼 말을 탄 격이니 깊은 못가를 걷듯 조심하십시오.|4
+661|氷消雪融 道路通達|빙소설융|얼음 녹고 눈 풀리니 막혔던 길이 열립니다.|1
+662|雙魚戲水 夫婦和合|쌍어희수|두 물고기가 물에서 노니 부부가 화합합니다.|1
+663|緣木求魚 所望難成|연목구어|나무에 올라 물고기를 구하니 바라는 바를 이루기 어렵습니다.|3
+711|泰山磐石 根基堅固|태산반석|태산의 너럭바위라 기반이 굳건합니다.|0
+712|山中藏玉 待價而沽|산중장옥|산속에 옥을 감추었으니 값을 기다려 팔아야 합니다. 때를 기다리십시오.|2
+713|登高跌足 驕者必敗|등고질족|높이 오르다 발을 헛디디니 교만하면 반드시 패합니다.|4
+721|松下問童 靜中得道|송하문동|소나무 아래 동자에게 길을 물으니 고요함 속에 도를 얻습니다.|2
+722|開門納福 財源滾滾|개문납복|문을 열어 복을 들이니 재물이 굴러듭니다.|0
+723|山雨欲來 風滿樓臺|산우욕래|산비가 오려 하니 바람이 누각에 가득합니다. 변동에 대비하십시오.|3
+731|積德之家 必有餘慶|적덕지가|덕을 쌓은 집에는 반드시 경사가 있습니다.|1
+732|一步一景 漸入佳境|일보일경|걸음마다 경치가 달라지니 점점 좋은 경지에 듭니다.|1
+733|孤雁失群 形單影隻|고안실군|외기러기가 무리를 잃으니 홀로 외롭습니다.|4
+741|白雲出岫 心曠神怡|백운출수|흰 구름이 산굴을 나오니 마음이 넓어지고 정신이 즐겁습니다.|1
+742|守口如甁 免禍保身|수구여병|입을 병마개처럼 지키면 화를 면하고 몸을 보전합니다.|3
+743|山窮水盡 柳暗花明|산궁수진|산이 다하고 물이 끝난 곳에 버들 우거지고 꽃이 밝으니 막다른 데서 길이 열립니다.|2
+751|高山流水 知音相逢|고산유수|높은 산 흐르는 물에서 지음(知音)을 만납니다.|0
+752|磨杵成針 有志竟成|마저성침|쇠공이를 갈아 바늘을 만드니 뜻이 있으면 마침내 이룹니다.|1
+753|雪上加霜 禍不單行|설상가상|눈 위에 서리가 내리니 화가 홀로 오지 않습니다.|4
+761|深山古寺 心靜得福|심산고사|깊은 산 옛 절이라 마음이 고요하면 복을 얻습니다.|2
+762|鷸蚌相爭 漁翁得利|휼방상쟁|도요새와 조개가 다투니 어부가 이익을 얻습니다. 다툼에 끼지 마십시오.|3
+763|春到山家 喜氣盈門|춘도산가|봄이 산집에 이르니 기쁜 기운이 문에 가득합니다.|1
+811|大地回春 萬物欣榮|대지회춘|대지에 봄이 돌아오니 만물이 기쁘게 자랍니다.|0
+812|五穀豊登 倉庫盈滿|오곡풍등|오곡이 풍년이라 곳간이 가득합니다.|0
+813|牛耕荒田 勞多得少|우경황전|소가 거친 밭을 가니 수고는 많고 얻음은 적습니다.|3
+821|母慈子孝 家門和睦|모자자효|어머니는 자애롭고 자식은 효도하니 집안이 화목합니다.|1
+822|平原走馬 易放難收|평원주마|평원을 달리는 말이라 놓기는 쉬우나 거두기 어렵습니다. 지출을 조심하십시오.|3
+823|厚德載物 終得人心|후덕재물|두터운 덕으로 만물을 실으니 끝내 인심을 얻습니다.|1
+831|秋收冬藏 家有餘糧|추수동장|가을에 거두고 겨울에 갈무리하니 집에 양식이 넉넉합니다.|1
+832|路遙知馬 日久見心|노요지마|길이 멀어야 말의 힘을 알고 날이 오래야 사람의 마음을 봅니다.|2
+833|黃河決堤 防微杜漸|황하결제|황하가 둑을 무너뜨리니 작은 틈부터 막아야 합니다.|4
+841|地中有山 謙受其益|지중유산|땅속에 산이 있는 겸(謙)의 상이니 겸손하면 이익을 받습니다.|1
+842|老蚌生珠 晩年得福|노방생주|늙은 조개가 진주를 낳으니 늦게 복을 얻습니다.|1
+843|履霜堅氷 漸至凶險|이상견빙|서리를 밟으면 굳은 얼음이 머지않으니 작은 조짐을 경계하십시오.|4
+851|甘雨隨車 恩澤普施|감우수거|단비가 수레를 따르니 은택이 두루 베풀어집니다.|0
+852|半途而廢 功虧一簣|반도이폐|중도에 그만두면 한 삼태기 흙이 모자라 공이 무너집니다. 끝까지 하십시오.|3
+853|守分安居 心安理得|수분안거|분수를 지켜 편히 사니 마음이 편하고 이치에 맞습니다.|2
+861|三陽開泰 吉慶有餘|삼양개태|세 양이 태평을 여니 길한 경사가 넘칩니다.|0
+862|小人當道 愼言愼行|소인당도|소인이 길을 막으니 말과 행동을 삼가십시오.|4
+863|寒梅吐香 苦後有榮|한매토향|찬 매화가 향기를 토하니 고생 뒤에 영화가 있습니다.|2
+`;
+      const GUA = {};
+      GUA_RAW.trim().split('\n').forEach(line => {
+        const [code, poem, title, meaning, grade] = line.split('|');
+        GUA[code] = { code, poem, title, meaning, grade: Number(grade) };
+      });
+
+      const GRADE_LABEL = ['대길(大吉)', '길(吉)', '평길(平吉)', '신중(愼重)', '근신(謹愼)'];
+      const GRADE_BASE = [88, 79, 70, 61, 53];
+      const GRADE_BADGE_CLASS = ['bg-crimson-600', 'bg-gold-600', 'bg-navy-700', 'bg-ink-500', 'bg-ink-700'];
+
+      /* 상괘(1~8)·중괘(1~6) 표기용 팔괘 (선천 팔괘 수: 乾1 兌2 離3 震4 巽5 坎6 艮7 坤8) */
+      const TRIGRAMS = [
+        null,
+        { sym: '☰', name: '건(乾)·하늘' }, { sym: '☱', name: '태(兌)·못' },
+        { sym: '☲', name: '리(離)·불' }, { sym: '☳', name: '진(震)·우레' },
+        { sym: '☴', name: '손(巽)·바람' }, { sym: '☵', name: '감(坎)·물' },
+        { sym: '☶', name: '간(艮)·산' }, { sym: '☷', name: '곤(坤)·땅' }
+      ];
+
+      /* =====================================================================
+         [DATA 2] 토정비결 서사 문장
+      ===================================================================== */
+      const GRADE_P1 = [
+        '하늘과 땅의 기운이 고루 응하는 대길의 상으로, 오래 준비해 온 일이 결실을 맺고 이름과 재물이 함께 오르는 해임을 뜻합니다.',
+        '막힌 곳이 하나씩 풀리며 노력한 만큼 보답이 돌아오는 길한 상으로, 꾸준히 걸어가면 연말에 뚜렷한 성과가 남습니다.',
+        '길과 흉이 서로 섞인 평길의 상으로, 큰 욕심보다 제 몫을 지키며 기회를 고르는 지혜가 복을 키웁니다.',
+        '겉으로는 평온해 보여도 안으로 변수가 숨은 신중의 상으로, 서두르기보다 기반을 다지고 사람을 가려 사귀어야 합니다.',
+        '바람이 거세고 물길이 험한 근신의 상으로, 새로 벌이기보다 지키고 줄이며 몸과 마음을 아끼면 액운이 비켜 갑니다.'
+      ];
+      const MID_P2 = [
+        '중괘의 기운은 하늘(乾)의 강건함을 닮아, 스스로 앞장설 때 일이 열립니다. 남의 결정을 기다리기보다 먼저 계획을 세우고 실행하는 사람이 기회를 잡습니다.',
+        '중괘의 기운은 못(兌)의 기쁨을 닮아, 말과 사람이 곧 재산입니다. 부드러운 말씨와 넓은 인맥이 막힌 일을 풀어 주니 모임과 협업을 소중히 하십시오.',
+        '중괘의 기운은 불(離)의 밝음을 닮아, 드러내고 알릴수록 이롭습니다. 실력을 감추지 말고 문서·발표·홍보로 이름을 알리면 귀한 자리가 따릅니다.',
+        '중괘의 기운은 우레(震)의 움직임을 닮아, 변화와 이동 속에 기회가 있습니다. 이직·이사·새 분야 도전 같은 변동을 두려워하지 말되 준비는 충분히 하십시오.',
+        '중괘의 기운은 바람(巽)의 유연함을 닮아, 한 번에 밀어붙이기보다 스며들듯 설득할 때 성사됩니다. 협상과 계약은 조건을 꼼꼼히 맞추면 이롭습니다.',
+        '중괘의 기운은 물(坎)의 깊음을 닮아, 겉보다 속을 채우는 해입니다. 공부·자격·저축처럼 시간이 쌓이는 일에 힘쓰면 훗날 큰 밑천이 됩니다.'
+      ];
+      const LOW_P3 = [
+        '하괘가 첫 자리(一)에 앉아 시작의 기운이 강하니, 일을 벌이는 힘은 넘치나 마무리가 약해지기 쉽습니다. 시작한 일은 끝을 맺은 뒤 다음 일로 넘어가십시오.',
+        '하괘가 가운데 자리(二)에 앉아 사람 사이의 기운이 강하니, 인연이 복도 되고 짐도 됩니다. 보증·금전 거래와 남의 일 개입은 한 번 더 생각하십시오.',
+        '하괘가 끝자리(三)에 앉아 마무리의 기운이 강하니, 결실은 있으나 마음이 조급해지기 쉽습니다. 성과를 서둘러 확정하려 하지 말고 때를 기다리면 더 크게 거둡니다.'
+      ];
+      const GRADE_CLOSING = [
+        '복이 넘칠 때 나누면 그 복이 배가 되니, 주변을 돌보는 넉넉한 마음을 잊지 마십시오.',
+        '작은 성취에 만족하지 말고 한 걸음 더 내딛으면 길운이 대길로 자랍니다.',
+        '평범한 하루를 성실히 쌓는 것이 이 해의 가장 큰 개운법입니다.',
+        '지금의 조심이 내년의 도약을 위한 밑거름이 되니 마음을 너그럽게 가지십시오.',
+        '움츠린 겨울이 있어야 봄이 오는 법이니, 올해는 몸을 아끼고 내실을 기르는 데 뜻을 두십시오.'
+      ];
+
+      const CATEGORIES = [
+        {
+          key: 'wealth', icon: '財', title: '재물운 (財物運)', color: 'bg-gold-600',
+          text: [
+            '재물의 문이 활짝 열린 해입니다. 정당한 노력에 대한 보수가 늘고 뜻밖의 부수입도 기대할 수 있습니다. 다만 들어온 돈의 일부는 반드시 묶어 두어야 복이 오래 머뭅니다.',
+            '들어오는 만큼 나가는 흐름이라 큰 손해도 큰 이득도 없습니다. 고정 지출을 줄이고 작은 저축을 꾸준히 하면 연말에 든든한 여유가 생깁니다.',
+            '재물이 새기 쉬운 해이니 투기성 투자, 보증, 성급한 동업 제안은 피하십시오. 꼭 필요한 곳에만 쓰고 현금 흐름을 지키는 것이 최선의 재테크입니다.'
+          ],
+          tip: '매달 정해진 날 수입의 일부를 먼저 떼어 두는 선저축 습관이 올해 재물운을 지키는 열쇠입니다.'
+        },
+        {
+          key: 'career', icon: '官', title: '직장·사업운 (職業運)', color: 'bg-navy-800',
+          text: [
+            '능력을 인정받아 승진·발탁·합격의 기쁨이 있는 해입니다. 책임이 큰 일을 맡을수록 이름이 오르니 주저하지 말고 먼저 손을 드십시오.',
+            '맡은 일을 성실히 해내면 평판이 차곡차곡 쌓이는 해입니다. 큰 변동보다는 현재 자리에서 전문성을 다지는 편이 이롭습니다.',
+            '윗사람과의 마찰이나 업무 과중이 생기기 쉽습니다. 성급한 이직·창업은 미루고, 문서와 약속을 꼼꼼히 챙겨 구설을 막으십시오.'
+          ],
+          tip: '중요한 보고·계약은 오전 중에 처리하고, 약속은 반드시 기록으로 남겨 두십시오.'
+        },
+        {
+          key: 'family', icon: '家', title: '가정·애정운 (家庭運)', color: 'bg-crimson-600',
+          text: [
+            '집안에 웃음이 가득하고 혼인·출산·입학 같은 경사가 따르는 해입니다. 미혼이라면 좋은 인연을 만날 가능성이 높습니다.',
+            '가정은 대체로 평안하나 바쁜 일상에 대화가 줄기 쉽습니다. 가족과 함께하는 시간을 의식적으로 만들면 화목이 깊어집니다.',
+            '사소한 말다툼이 큰 서운함으로 번지기 쉬운 해입니다. 한 발 물러서 먼저 손을 내밀고, 집안 어른의 건강을 살피십시오.'
+          ],
+          tip: '한 달에 한 번은 가족이 함께 식사하는 날을 정해 두면 집안의 기운이 맑아집니다.'
+        },
+        {
+          key: 'health', icon: '康', title: '건강운 (健康運)', color: 'bg-navy-700',
+          text: [
+            '기력이 충실하고 회복력이 좋은 해입니다. 이 기운을 살려 새로운 운동 습관을 들이면 몇 해의 건강이 든든해집니다.',
+            '큰 병은 없으나 과로와 수면 부족이 쌓이기 쉽습니다. 정미년은 화(火)·토(土)의 기운이 강하니 심장과 위장을 돌보고 물을 자주 드십시오.',
+            '피로가 누적되어 잔병이 잦을 수 있습니다. 정기 검진을 미루지 말고, 무리한 일정과 음주를 줄이며 이동 중 안전에 유의하십시오.'
+          ],
+          tip: '건강 이상이 느껴지면 운세보다 전문 의료진의 진단을 먼저 받으십시오.'
+        },
+        {
+          key: 'helper', icon: '貴', title: '귀인·개운법 (貴人運)', color: 'bg-gold-700',
+          text: [
+            '든든한 귀인이 곁에 있는 해입니다. 윗사람·선배의 추천이나 뜻밖의 소개가 큰 기회로 이어지니 인사와 감사 표현을 아끼지 마십시오.',
+            '귀인은 멀리 있지 않고 오래 알던 사람 가운데 있습니다. 소원했던 지인에게 먼저 연락하면 막혔던 일이 풀립니다.',
+            '사람으로 인한 상처가 생기기 쉬우니 새로운 인연은 천천히 판단하십시오. 대신 스스로를 돕는 공부와 꾸준한 수양이 귀인 역할을 합니다.'
+          ],
+          tip: ''
+        }
+      ];
+
+      const MONTH_INTRO = [
+        '새해의 첫 기운이 움트는 정월에는', '초목이 싹을 틔우는 이월에는', '봄볕이 무르익는 삼월에는',
+        '초여름 기운이 일어나는 사월에는', '양기가 가장 왕성한 오월에는', '정미년 본래의 기운이 겹치는 유월에는',
+        '가을 기운이 들어서는 칠월에는', '결실이 영그는 팔월에는', '거두고 정리하는 구월에는',
+        '겨울 문턱에 이르는 시월에는', '음기가 가장 깊은 동짓달에는', '한 해를 갈무리하는 섣달에는'
+      ];
+      const MONTH_POOL = {
+        high: [
+          '뜻밖의 기쁜 소식이 들어오고 추진하던 일이 순조롭게 풀립니다.',
+          '귀인의 도움으로 재물과 명예가 함께 오르니 적극적으로 나서십시오.',
+          '오래 기다린 결과가 나오고 계약·문서에 길한 기운이 있습니다.',
+          '사람이 모이고 재물이 따르니 새로운 시작에 좋은 때입니다.'
+        ],
+        mid: [
+          '큰 변화는 없으나 작은 성과가 쌓이니 꾸준함을 잃지 마십시오.',
+          '얻는 것과 나가는 것이 엇비슷하니 지출 관리에 신경 쓰십시오.',
+          '서두르면 그르치고 기다리면 이루어지니 때를 살피십시오.',
+          '집안과 주변을 정돈하면 다음 달의 운이 한결 가벼워집니다.'
+        ],
+        low: [
+          '구설과 시비가 따르기 쉬우니 말을 아끼고 문서를 확인하십시오.',
+          '건강과 안전에 유의하고 무리한 이동이나 약속은 피하십시오.',
+          '재물이 새기 쉬우니 투자·보증·대여는 다음으로 미루십시오.',
+          '마음이 흔들리기 쉬운 때이니 큰 결정은 잠시 보류하십시오.'
+        ]
+      };
+      const MONTH_ADVICE = {
+        high: ['동쪽에서 길한 소식이 옵니다.', '먼저 연락하는 쪽이 이깁니다.', '문서와 계약에 힘을 쏟으십시오.', '배움에 투자하면 배로 돌아옵니다.'],
+        mid: ['계획표를 다시 점검하십시오.', '건강 관리에 시간을 내십시오.', '오래된 인연을 챙기십시오.', '작은 저축을 시작하기 좋습니다.'],
+        low: ['말 한마디를 아끼십시오.', '밤길과 과음을 조심하십시오.', '서류는 두 번 확인하십시오.', '조용히 내실을 다지십시오.']
+      };
+
+      /* 2027 정미년(未)과 본명 띠의 관계 */
+      function zodiacRelation(b) {
+        if (b === 7) return { label: '본명년(本命年)', tone: 'caution', desc: '태어난 해의 띠와 같은 양띠 해를 맞이하는 본명년입니다. 예로부터 본명년에는 변동이 잦다 하니, 큰일은 신중히 결정하고 마음을 단정히 하면 오히려 자신을 돌아보고 새로 다지는 해가 됩니다.' };
+        if (b === 3 || b === 11) return { label: '삼합(三合) · 대길', tone: 'good', desc: '해(亥)·묘(卯)·미(未)가 목(木)의 삼합을 이루어 정미년의 기운과 손을 맞잡습니다. 협력자가 늘고 일이 순리대로 풀리니, 사람을 모으고 함께 도모하는 일에 큰 힘이 실립니다.' };
+        if (b === 6) return { label: '육합(六合) · 길', tone: 'good', desc: '오(午)와 미(未)가 육합을 이루어 한 해의 기운과 정답게 어울립니다. 인연과 화합의 운이 강해 혼인·계약·동업 등 사람과 맺는 일에 길합니다.' };
+        if (b === 1) return { label: '충(沖) · 주의', tone: 'bad', desc: '축(丑)과 미(未)가 마주 부딪히는 충의 관계입니다. 이동·이사·직장 변동이 생기기 쉬우니 서두르지 말고, 교통안전과 건강을 각별히 살피면 변화가 오히려 도약의 계기가 됩니다.' };
+        if (b === 10) return { label: '형파(刑破) · 주의', tone: 'bad', desc: '술(戌)과 미(未)가 형(刑)과 파(破)를 이루니 문서·법률·약속에서 마찰이 생기기 쉽습니다. 계약서는 꼼꼼히 확인하고 감정적인 다툼은 피하십시오.' };
+        if (b === 0) return { label: '원진·해(害) · 주의', tone: 'bad', desc: '자(子)와 미(未)가 서로 해(害)하는 관계라 가까운 사람과의 오해가 생기기 쉽습니다. 말을 부드럽게 하고 서운함은 그때그때 풀어 두십시오.' };
+        return { label: '평(平) · 무난', tone: 'neutral', desc: '정미년의 기운과 크게 부딪히지도 크게 돕지도 않는 무난한 관계입니다. 스스로의 노력과 처신이 그대로 결과가 되는 해이니 꾸준함이 최고의 개운법입니다.' };
+      }
+      const SANHAP_FRIENDS = [[4, 8], [5, 9], [6, 10], [7, 11], [8, 0], [9, 1], [10, 2], [11, 3], [0, 4], [1, 5], [2, 6], [3, 7]];
+
+      /* =====================================================================
+         [ENGINE 3] 정통 태현수 토정비결 산출
+      ===================================================================== */
+      function computeTojeong(lunar) {
+        const age = TARGET_YEAR - lunar.year + 1;
+        const upper = (age + TAESE_SU) % 8 || 8;
+
+        const m = lunar.month; // 윤달생은 평달 기준
+        const mDays = monthDays(TARGET_YEAR, m);
+        const ms = mod(firstMonthStem(yearStem(TARGET_YEAR)) + m - 1, 10);
+        const mb = mod(m + 1, 12);
+        const wolgeon = TH_STEM[ms] + TH_BRANCH[mb];
+        const middle = (mDays + wolgeon) % 6 || 6;
+
+        let lookupDay = lunar.day;
+        let adjusted = false;
+        if (lookupDay > mDays) { lookupDay = mDays; adjusted = true; }
+        const target = lunarToSolar(TARGET_YEAR, m, lookupDay, false);
+        const dgz = dayGanzhiIndex(target.year, target.month, target.day);
+        const iljin = TH_STEM[dgz % 10] + TH_BRANCH[dgz % 12];
+        const lower = (lunar.day + iljin) % 3 || 3;
+
+        const code = `${upper}${middle}${lower}`;
+        return {
+          age, upper, middle, lower, code, gua: GUA[code],
+          mDays, ms, mb, wolgeon, lookupDay, adjusted, target, dgz, iljin,
+          codeNum: Number(code)
+        };
+      }
+
+      function buildTojeongScores(t, birthBranch) {
+        const g = t.gua.grade;
+        const base = GRADE_BASE[g];
+        const months = [];
+        for (let i = 0; i < 12; i++) {
+          let s = base + (hash(t.codeNum, i) % 19) - 9;
+          if (i >= 6) s += (t.lower === 3 ? 4 : t.lower === 1 ? -3 : 0);
+          else s += (t.upper % 2 === 1 ? 3 : -1);
+          if (i === 5) s -= 3; // 미월(未月) 겹침
+          months.push(clamp(Math.round(s), 38, 97));
+        }
+        const rel = zodiacRelation(birthBranch);
+        const relAdj = rel.tone === 'good' ? 3 : rel.tone === 'bad' ? -3 : 0;
+        const cats = CATEGORIES.map((c, i) => clamp(base + (hash(t.codeNum, 100 + i) % 17) - 8 + relAdj, 40, 97));
+        const total = clamp(Math.round(base * 0.6 + (months.reduce((a, b) => a + b, 0) / 12) * 0.4 + relAdj), 40, 97);
+        return { months, cats, total, rel };
+      }
+
+      function levelOf(score) { return score >= 76 ? 'high' : score >= 62 ? 'mid' : 'low'; }
+
+      /* =====================================================================
+         [ENGINE 4] 자미두수(紫微斗數) 안성법
+      ===================================================================== */
+      const STAR = {
+        ziwei: { h: '紫微', ko: '자미', type: 'major' }, tianji: { h: '天機', ko: '천기', type: 'major' },
+        taiyang: { h: '太陽', ko: '태양', type: 'major' }, wuqu: { h: '武曲', ko: '무곡', type: 'major' },
+        tiantong: { h: '天同', ko: '천동', type: 'major' }, lianzhen: { h: '廉貞', ko: '염정', type: 'major' },
+        tianfu: { h: '天府', ko: '천부', type: 'major' }, taiyin: { h: '太陰', ko: '태음', type: 'major' },
+        tanlang: { h: '貪狼', ko: '탐랑', type: 'major' }, jumen: { h: '巨門', ko: '거문', type: 'major' },
+        tianxiang: { h: '天相', ko: '천상', type: 'major' }, tianliang: { h: '天梁', ko: '천량', type: 'major' },
+        qisha: { h: '七殺', ko: '칠살', type: 'major' }, pojun: { h: '破軍', ko: '파군', type: 'major' },
+        wenchang: { h: '文昌', ko: '문창', type: 'lucky' }, wenqu: { h: '文曲', ko: '문곡', type: 'lucky' },
+        zuofu: { h: '左輔', ko: '좌보', type: 'lucky' }, youbi: { h: '右弼', ko: '우필', type: 'lucky' },
+        tiankui: { h: '天魁', ko: '천괴', type: 'lucky' }, tianyue: { h: '天鉞', ko: '천월', type: 'lucky' },
+        lucun: { h: '祿存', ko: '녹존', type: 'lu' },
+        qingyang: { h: '擎羊', ko: '경양', type: 'sha' }, tuoluo: { h: '陀羅', ko: '타라', type: 'sha' },
+        huoxing: { h: '火星', ko: '화성', type: 'sha' }, lingxing: { h: '鈴星', ko: '영성', type: 'sha' },
+        dikong: { h: '地空', ko: '지공', type: 'sha' }, dijie: { h: '地劫', ko: '지겁', type: 'sha' }
+      };
+      const MAJOR_INFO = {
+        ziwei: ['제왕성 · 존귀와 통솔', '자미성은 북두의 제왕성으로, 타고난 품격과 자존심이 높고 무리를 이끄는 통솔력이 있습니다. 남의 아래에 오래 머물기보다 스스로 판을 짜는 자리에서 빛나며, 좌보·우필 같은 보좌성이 함께하면 그릇이 더욱 커집니다.', '자미가 앉아 이 궁의 일에 품위와 주도권이 생깁니다'],
+        tianji: ['지혜성 · 기획과 변화', '천기성은 지혜와 기획의 별로, 두뇌 회전이 빠르고 변화를 읽는 감각이 뛰어납니다. 생각이 많아 결단이 늦어지기도 하나 참모·기획·연구 분야에서 탁월한 능력을 보입니다.', '천기가 앉아 이 궁의 일이 변화가 잦고 머리로 풀어야 할 일이 많습니다'],
+        taiyang: ['광명성 · 베풂과 명예', '태양성은 빛과 베풂의 별로, 공명정대하고 남을 돕기를 좋아하며 명예를 중시합니다. 대중을 상대하는 일에서 이름을 얻으나, 베풀기만 하다 실속을 놓치지 않도록 유의해야 합니다.', '태양이 앉아 이 궁의 일이 밖으로 드러나고 명예와 연결됩니다'],
+        wuqu: ['재성 · 결단과 실행', '무곡성은 재물과 결단의 별로, 강직하고 실행력이 강하며 금전 감각이 뛰어납니다. 말보다 결과로 증명하는 타입이며 금융·경영·기술 분야에서 실속 있는 성취를 이룹니다.', '무곡이 앉아 이 궁의 일이 재물·실무와 직결됩니다'],
+        tiantong: ['복성 · 화합과 향유', '천동성은 복과 화합의 별로, 성품이 온화하고 낙천적이며 사람을 편하게 합니다. 고생 끝에 복을 누리는 별이니 젊어서의 수고가 중년 이후 여유로 돌아옵니다.', '천동이 앉아 이 궁의 일이 원만하고 복이 따르나 게으름을 경계해야 합니다'],
+        lianzhen: ['수성(囚星) · 열정과 원칙', '염정성은 열정과 원칙의 별로, 승부욕이 강하고 일 처리가 분명하며 조직 내 처세 감각이 있습니다. 감정의 기복을 다스리면 행정·법률·기술 분야에서 크게 성공합니다.', '염정이 앉아 이 궁의 일에 경쟁과 열정이 따릅니다'],
+        tianfu: ['재고성 · 안정과 관리', '천부성은 남두의 재고(財庫)성으로, 안정과 관리 능력이 뛰어나고 신중하며 포용력이 있습니다. 쌓고 지키는 힘이 강해 재물과 조직을 오래도록 관리하는 자리에서 복이 큽니다.', '천부가 앉아 이 궁의 일이 안정되고 저축·관리의 복이 있습니다'],
+        taiyin: ['달의 별 · 섬세와 축재', '태음성은 달의 별로, 섬세하고 감성이 풍부하며 계획적으로 재물을 모으는 힘이 있습니다. 부동산·저축과 인연이 깊고, 조용히 내실을 다지는 방식으로 크게 이룹니다.', '태음이 앉아 이 궁의 일이 섬세하고 재물·부동산과 연결됩니다'],
+        tanlang: ['도화성 · 욕망과 재능', '탐랑성은 욕망과 재능의 별로, 다재다능하고 사교성이 뛰어나며 예술·외국어·영업에 소질이 있습니다. 욕심을 한곳에 모으면 큰 성취를 이루지만 관심이 흩어지면 이루는 것이 적습니다.', '탐랑이 앉아 이 궁의 일에 욕망과 교제, 즐거움이 따릅니다'],
+        jumen: ['암성 · 언변과 분석', '거문성은 언변과 분석의 별로, 말솜씨와 비판적 사고가 뛰어나 교육·법률·상담·방송에서 두각을 나타냅니다. 말로 인한 구설이 따르기 쉬우니 표현을 다듬을수록 복이 됩니다.', '거문이 앉아 이 궁의 일에 말과 시비가 따르니 소통을 신중히 해야 합니다'],
+        tianxiang: ['인성(印星) · 보좌와 공정', '천상성은 인장(印章)과 보좌의 별로, 공정하고 성실하며 남을 돕는 일에서 신뢰를 얻습니다. 2인자·전문 관리자 자리에서 특히 빛나며 의리와 체면을 중시합니다.', '천상이 앉아 이 궁의 일이 공정하게 돌아가고 도움을 주고받습니다'],
+        tianliang: ['음덕성 · 보호와 노련', '천량성은 음덕과 보호의 별로, 노련하고 원칙적이며 위기에서 사람을 구하는 힘이 있습니다. 의료·교육·복지·감사 분야와 인연이 깊고 나이 들수록 존경을 받습니다.', '천량이 앉아 이 궁의 일에 음덕과 보호가 있어 어려움이 풀립니다'],
+        qisha: ['장군성 · 개척과 결단', '칠살성은 장군의 별로, 용맹하고 개척 정신이 강하며 한번 정하면 끝까지 밀어붙입니다. 굴곡을 겪으며 성장하는 타입으로 독립·창업·현장 지휘에서 큰 공을 세웁니다.', '칠살이 앉아 이 궁의 일에 변동과 승부가 따릅니다'],
+        pojun: ['모성(耗星) · 혁신과 재건', '파군성은 소모와 혁신의 별로, 낡은 것을 부수고 새것을 세우는 힘이 있습니다. 변화와 도전을 즐기며, 크게 무너뜨린 뒤 다시 일으키는 인생 곡선을 그리는 경우가 많습니다.', '파군이 앉아 이 궁의 일에 변화와 소모가 크니 새판 짜기에 유리합니다']
+      };
+      const MINOR_INFO = {
+        wenchang: '학문·시험·문서운', wenqu: '재예·언변·예술성', zuofu: '보좌·협력자', youbi: '조력·인덕',
+        tiankui: '양귀인(윗사람의 도움)', tianyue: '음귀인(뜻밖의 도움)', lucun: '재록·안정',
+        qingyang: '충돌·수술수', tuoluo: '지연·집착', huoxing: '급변·폭발력', lingxing: '은근한 압박',
+        dikong: '허망·정신세계', dijie: '손재·소모'
+      };
+      const PALACES = [
+        { ko: '명궁', h: '命宮' }, { ko: '형제궁', h: '兄弟' }, { ko: '부처궁', h: '夫妻' }, { ko: '자녀궁', h: '子女' },
+        { ko: '재백궁', h: '財帛' }, { ko: '질액궁', h: '疾厄' }, { ko: '천이궁', h: '遷移' }, { ko: '교우궁', h: '交友' },
+        { ko: '관록궁', h: '官祿' }, { ko: '전택궁', h: '田宅' }, { ko: '복덕궁', h: '福德' }, { ko: '부모궁', h: '父母' }
+      ];
+      const PALACE_DOMAIN = [
+        '나 자신의 성격과 운세의 근본', '형제자매·동료와의 관계', '배우자와 연애·혼인', '자녀·아랫사람과 창작',
+        '재물을 벌고 쓰는 방식', '몸의 건강과 체질', '이동·해외·대외 활동', '친구·부하 등 대인관계',
+        '직업·사업과 사회적 지위', '부동산·주거와 가정의 기반', '정신적 만족·취미와 복의 그릇', '부모·윗사람·문서와 학업'
+      ];
+      const SHEN_TEXT = {
+        0: '신궁이 명궁과 같은 자리(命身同宮)에 있어, 타고난 성향이 평생 크게 변하지 않고 자기 주관대로 인생을 개척합니다. 장점이 뚜렷한 만큼 고집도 강하니, 남의 조언을 귀담아들으면 후반생이 더 넓어집니다.',
+        2: '신궁이 부처궁에 있어, 인생 후반의 중심이 배우자와 동반자 관계에 놓입니다. 좋은 짝과 함께 이루는 성취가 크니 관계에 정성을 들이십시오.',
+        4: '신궁이 재백궁에 있어, 중년 이후 재물을 일구고 관리하는 일이 인생의 중심이 됩니다. 실리를 중시하는 감각이 강해지며 경제적 자립이 곧 행복의 기반이 됩니다.',
+        6: '신궁이 천이궁에 있어, 고향을 떠나거나 바깥 세계로 나아갈수록 운이 열립니다. 이동·출장·해외·대외 활동 속에서 인생 후반의 기회를 만납니다.',
+        8: '신궁이 관록궁에 있어, 일과 사회적 성취가 인생의 중심축입니다. 일을 통해 자신을 증명하며, 나이가 들수록 직업적 명성과 책임이 커집니다.',
+        10: '신궁이 복덕궁에 있어, 인생 후반에는 정신적 만족과 마음의 평화를 중시합니다. 취미·신앙·공부에서 깊은 즐거움을 찾으며, 마음 씀씀이에 따라 복의 크기가 달라집니다.'
+      };
+      const SIHUA_TABLE = [
+        ['lianzhen', 'pojun', 'wuqu', 'taiyang'], ['tianji', 'tianliang', 'ziwei', 'taiyin'],
+        ['tiantong', 'tianji', 'wenchang', 'lianzhen'], ['taiyin', 'tiantong', 'tianji', 'jumen'],
+        ['tanlang', 'taiyin', 'youbi', 'tianji'], ['wuqu', 'tanlang', 'tianliang', 'wenqu'],
+        ['taiyang', 'wuqu', 'taiyin', 'tiantong'], ['jumen', 'taiyang', 'wenqu', 'wenchang'],
+        ['tianliang', 'ziwei', 'zuofu', 'wuqu'], ['pojun', 'jumen', 'taiyin', 'tanlang']
+      ];
+      const SIHUA_H = ['祿', '權', '科', '忌'];
+      const SIHUA_KO = ['화록(化祿)', '화권(化權)', '화과(化科)', '화기(化忌)'];
+      const SIHUA_CLS = ['lu', 'qu', 'ke', 'ji'];
+      const KUI_YUE = [[1, 7], [0, 8], [11, 9], [11, 9], [1, 7], [0, 8], [1, 7], [6, 2], [3, 5], [3, 5]];
+      const LUCUN_POS = [2, 3, 5, 6, 5, 6, 8, 9, 11, 0];
+      const NAYIN = '金火木土金火水土金木水土火木水金火木土金火水土金木水土火木水';
+      const JU_OF = { '水': 2, '木': 3, '金': 4, '土': 5, '火': 6 };
+      const JU_NAME = { 2: '수이국(水二局)', 3: '목삼국(木三局)', 4: '금사국(金四局)', 5: '토오국(土五局)', 6: '화육국(火六局)' };
+
+      function computeZiwei(lunar, hour, gender) {
+        const ys = yearStem(lunar.year);
+        const yb = yearBranch(lunar.year);
+        let m = lunar.month;
+        if (lunar.isLeap && lunar.day > 15) m = m % 12 + 1; // 윤달 후반은 다음 달로 봄
+        const d = lunar.day;
+        const h = hour;
+
+        const ming = mod(2 + (m - 1) - h, 12);
+        const shen = mod(2 + (m - 1) + h, 12);
+        const s0 = firstMonthStem(ys);
+        const stemOf = b => mod(s0 + mod(b - 2, 12), 10);
+
+        const nayin = NAYIN[Math.floor(gz60(stemOf(ming), ming) / 2)];
+        const ju = JU_OF[nayin];
+
+        const cells = Array.from({ length: 12 }, () => []);
+        const place = (b, key) => cells[mod(b, 12)].push(key);
+
+        // 자미성 위치
+        let x = 0;
+        while ((d + x) % ju !== 0) x++;
+        const q = (d + x) / ju;
+        const zw = mod(1 + q + (x % 2 === 1 ? -x : x), 12);
+        // 자미성계 (역행)
+        place(zw, 'ziwei'); place(zw - 1, 'tianji'); place(zw - 3, 'taiyang');
+        place(zw - 4, 'wuqu'); place(zw - 5, 'tiantong'); place(zw - 8, 'lianzhen');
+        // 천부성계 (순행)
+        const tf = mod(4 - zw, 12);
+        place(tf, 'tianfu'); place(tf + 1, 'taiyin'); place(tf + 2, 'tanlang'); place(tf + 3, 'jumen');
+        place(tf + 4, 'tianxiang'); place(tf + 5, 'tianliang'); place(tf + 6, 'qisha'); place(tf + 10, 'pojun');
+        // 육길성
+        place(10 - h, 'wenchang'); place(4 + h, 'wenqu');
+        place(4 + (m - 1), 'zuofu'); place(10 - (m - 1), 'youbi');
+        place(KUI_YUE[ys][0], 'tiankui'); place(KUI_YUE[ys][1], 'tianyue');
+        // 녹존 · 경양 · 타라
+        const lc = LUCUN_POS[ys];
+        place(lc, 'lucun'); place(lc + 1, 'qingyang'); place(lc - 1, 'tuoluo');
+        // 화성 · 영성
+        let fire, bell;
+        if ([2, 6, 10].includes(yb)) { fire = 1; bell = 3; }
+        else if ([8, 0, 4].includes(yb)) { fire = 2; bell = 10; }
+        else if ([5, 9, 1].includes(yb)) { fire = 3; bell = 10; }
+        else { fire = 9; bell = 10; }
+        place(fire + h, 'huoxing'); place(bell + h, 'lingxing');
+        // 지공 · 지겁
+        place(11 - h, 'dikong'); place(11 + h, 'dijie');
+
+        const posOf = {};
+        cells.forEach((arr, b) => arr.forEach(k => { posOf[k] = b; }));
+
+        const natalSihua = {};
+        SIHUA_TABLE[ys].forEach((k, i) => { natalSihua[k] = i; });
+        const flowSihua = {};
+        SIHUA_TABLE[3].forEach((k, i) => { flowSihua[k] = i; }); // 2027 丁年
+
+        // 대한(大限)
+        const forward = (ys % 2 === 0) === (gender === 'M');
+        const dir = forward ? 1 : -1;
+        const decade = Array(12);
+        for (let k = 0; k < 12; k++) {
+          const b = mod(ming + dir * k, 12);
+          decade[b] = [ju + 10 * k, ju + 10 * k + 9];
+        }
+        const age2027 = TARGET_YEAR - lunar.year + 1;
+        let curDecadeBranch = -1;
+        for (let b = 0; b < 12; b++) {
+          if (age2027 >= decade[b][0] && age2027 <= decade[b][1]) curDecadeBranch = b;
+        }
+
+        const natalName = b => mod(ming - b, 12);
+        const flowName = b => mod(TARGET_BRANCH - b, 12);
+
+        return {
+          ys, yb, m, ming, shen, stemOf, nayin, ju, cells, posOf, natalSihua, flowSihua,
+          decade, curDecadeBranch, age2027, natalName, flowName, forward
+        };
+      }
+
+      function palaceScore(z, b) {
+        let s = 62;
+        const arr = z.cells[b];
+        if (!arr.some(k => STAR[k].type === 'major')) s -= 3;
+        arr.forEach(k => {
+          const t = STAR[k].type;
+          if (t === 'lucky' || t === 'lu') s += 5;
+          if (t === 'sha') s -= 5;
+          if (k in z.natalSihua) s += [4, 3, 3, -6][z.natalSihua[k]];
+          if (k in z.flowSihua) s += [8, 6, 5, -9][z.flowSihua[k]];
+        });
+        return clamp(s, 32, 96);
+      }
+      function majorsAt(z, b) { return z.cells[b].filter(k => STAR[k].type === 'major'); }
+      function starLabel(k) { return `${STAR[k].ko}(${STAR[k].h})`; }
+      function majorListText(z, b) {
+        const ms = majorsAt(z, b);
+        return ms.length ? ms.map(starLabel).join('·') : '주성 없음(공궁)';
+      }
+
+      /* =====================================================================
+         [UI 1] 공통 유틸
+      ===================================================================== */
+      const $ = id => document.getElementById(id);
+      const SEG_ON = ['bg-navy-800', 'text-white', 'shadow-sm', 'font-semibold'];
+      const SEG_OFF = ['text-ink-700', 'hover:text-navy-800', 'font-medium'];
+      function setSegment(buttons, active) {
+        buttons.forEach(btn => {
+          const on = btn === active;
+          SEG_ON.forEach(c => btn.classList.toggle(c, on));
+          SEG_OFF.forEach(c => btn.classList.toggle(c, !on));
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+      let toastTimer = null;
+      function toast(msg) {
+        const el = $('toastMessage');
+        $('toastText').textContent = msg;
+        el.classList.remove('opacity-0', 'translate-y-3');
+        el.classList.add('opacity-100', 'translate-y-0');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          el.classList.add('opacity-0', 'translate-y-3');
+          el.classList.remove('opacity-100', 'translate-y-0');
+        }, 2200);
+      }
+      function gaugeHtml(score, colorClass) {
+        return `<div class="h-2 rounded-full bg-hanji-200 overflow-hidden"><div class="gauge-fill h-full rounded-full ${colorClass}" style="width:0%" data-w="${score}"></div></div>`;
+      }
+      function animateGauges(root) {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          root.querySelectorAll('.gauge-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
+        }));
+      }
+      function scoreColor(s) { return s >= 76 ? 'bg-crimson-600' : s >= 62 ? 'bg-gold-500' : 'bg-navy-700'; }
+      function scoreWord(s) { return s >= 76 ? '길(吉)' : s >= 62 ? '평(平)' : '주의(注意)'; }
+      function fmtDate(o) { return `${o.year}.${o.month}.${o.day}`; }
+      function monthLabel(i) { return `${MONTH_KO[i]}(${i + 1}월)`; }
+
+      const state = {
+        gender: 'M',
+        cal: 'solar', // solar | lunar | leap
+        mode: 'tojeong',
+        monthFilter: 'all',
+        ctx: null,
+        selected: null
+      };
+
+      /* =====================================================================
+         [UI 2] 입력 폼
+      ===================================================================== */
+      const yearSel = $('birthYear'), monthSel = $('birthMonth'), daySel = $('birthDay');
+      const btnSolar = $('btnSolar'), btnLunarNormal = $('btnLunarNormal'), btnLunarLeap = $('btnLunarLeap');
+      const btnMale = $('btnMale'), btnFemale = $('btnFemale');
+
+      function fillSelect(sel, items, keep) {
+        sel.innerHTML = items.map(it => `<option value="${it.v}"${it.disabled ? ' disabled' : ''}>${it.t}</option>`).join('');
+        const vals = items.filter(it => !it.disabled).map(it => String(it.v));
+        if (keep != null && vals.includes(String(keep))) sel.value = String(keep);
+        else if (vals.length) sel.value = Number(keep) > Number(vals[vals.length - 1]) ? vals[vals.length - 1] : vals[0];
+      }
+
+      function populateYears() {
+        const items = [];
+        for (let y = 2026; y >= 1930; y--) {
+          items.push({ v: y, t: `${y}년 (${gzStr(yearStem(y), yearBranch(y))} · ${ZODIAC_KO[yearBranch(y)]}띠)` });
+        }
+        fillSelect(yearSel, items, 1990);
+      }
+
+      function updateMonths() {
+        const y = Number(yearSel.value);
+        const keep = Number(monthSel.value) || 1;
+        if (state.cal === 'leap') {
+          const lm = leapMonth(y);
+          if (lm) fillSelect(monthSel, [{ v: lm, t: `윤${lm}월 (閏${lm}月)` }], lm);
+          else fillSelect(monthSel, [{ v: '', t: '윤달 없음', disabled: true }], null);
+        } else {
+          const items = [];
+          for (let m = 1; m <= 12; m++) items.push({ v: m, t: `${m}월` });
+          fillSelect(monthSel, items, keep);
+        }
+        updateDays();
+      }
+
+      function updateDays() {
+        const y = Number(yearSel.value);
+        const m = Number(monthSel.value);
+        const keep = Number(daySel.value) || 1;
+        if (!m) {
+          fillSelect(daySel, [{ v: '', t: '-', disabled: true }], null);
+        } else {
+          const n = state.cal === 'solar' ? solarMonthDays(y, m) : lunarMonthLength(y, m, state.cal === 'leap');
+          const items = [];
+          for (let d = 1; d <= n; d++) items.push({ v: d, t: `${d}일` });
+          fillSelect(daySel, items, Math.min(keep, n));
+        }
+        updateHint();
+      }
+
+      function updateHint() {
+        const y = Number(yearSel.value);
+        const lm = leapMonth(y);
+        const leapTxt = lm ? `${y}년(음력)은 윤${lm}월이 있습니다 (${leapDays(y)}일).` : `${y}년(음력)에는 윤달이 없습니다.`;
+        const hint = $('calHint');
+        if (state.cal === 'solar') {
+          const m = Number(monthSel.value), d = Number(daySel.value);
+          const l = (m && d) ? solarToLunar(y, m, d) : null;
+          hint.textContent = l
+            ? `양력 ${y}.${m}.${d} → 음력 ${l.year}년 ${l.isLeap ? '윤' : ''}${l.month}월 ${l.day}일로 자동 변환됩니다.`
+            : '양력 생년월일을 입력하시면 정밀 만세력 테이블로 음력 날짜와 윤달 여부를 자동 변환합니다.';
+        } else if (state.cal === 'lunar') {
+          hint.textContent = `음력 평달 기준으로 입력합니다. ${leapTxt}`;
+        } else {
+          hint.textContent = lm ? `윤달생 입력 모드입니다. ${leapTxt}` : `${leapTxt} 평달로 입력해 주세요.`;
+        }
+      }
+
+      function setCal(cal) {
+        state.cal = cal;
+        setSegment([btnSolar, btnLunarNormal, btnLunarLeap], cal === 'solar' ? btnSolar : cal === 'lunar' ? btnLunarNormal : btnLunarLeap);
+        $('formError').classList.add('hidden');
+        updateMonths();
+      }
+      function setGender(g) {
+        state.gender = g;
+        setSegment([btnMale, btnFemale], g === 'M' ? btnMale : btnFemale);
+      }
+
+      function showError(msg) {
+        const el = $('formError');
+        el.textContent = msg;
+        el.classList.remove('hidden');
+      }
+
+      /* =====================================================================
+         [UI 3] 결과 렌더링 — 토정비결
+      ===================================================================== */
+      function renderTojeong(ctx) {
+        const { who, t, sc, lunar, solar } = ctx;
+        const g = t.gua;
+        const text = [];
+        const zb = yearBranch(lunar.year);
+
+        $('resUserMeta').textContent = `${who} · ${ctx.gender === 'M' ? '남성' : '여성'} · ${ZODIAC_KO[zb]}띠 · 2027년 세수 ${t.age}세`;
+        $('resLunarConverted').textContent =
+          `양력 ${fmtDate(solar)} / 음력 ${lunar.year}년 ${lunar.isLeap ? '윤' : ''}${lunar.month}월 ${lunar.day}일 · ${gzStr(yearStem(lunar.year), zb)}년 · ${HOUR_KO[ctx.hour]}`;
+        const badge = $('resGradeBadge');
+        badge.textContent = GRADE_LABEL[g.grade];
+        badge.className = `px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-white shadow-sm ${GRADE_BADGE_CLASS[g.grade]}`;
+        $('resGuaNumber').textContent = `제 ${t.code} 괘`;
+        $('resUpperSymbol').textContent = TRIGRAMS[t.upper].sym;
+        $('resUpperName').textContent = `${t.upper} · ${TRIGRAMS[t.upper].name}`;
+        $('resMiddleSymbol').textContent = TRIGRAMS[t.middle].sym;
+        $('resMiddleName').textContent = `${t.middle} · ${TRIGRAMS[t.middle].name}`;
+        $('resGuaDigits').textContent = `상괘 ${t.upper} · 중괘 ${t.middle} · 하괘 ${t.lower}  →  ${t.code}`;
+        $('resGuaTitle').textContent = `${g.title}괘`;
+        $('resGuaHanja').textContent = `${g.poem.split(' ')[0]}卦`;
+        $('resPoemOriginal').textContent = g.poem;
+        $('resPoemMeaning').textContent = g.meaning;
+        $('resZodiacBadge').textContent = `${ZODIAC_KO[zb]}띠 (${BRANCHES[zb]})`;
+        $('resCompatibilityBadge').textContent = `정미년과 ${sc.rel.label}`;
+        $('resZodiacDesc').textContent = sc.rel.desc;
+
+        text.push('■ 2027 정미년 토정비결', `${$('resUserMeta').textContent}`, $('resLunarConverted').textContent,
+          `본괘: 제 ${t.code}괘 ${g.title}괘 (${GRADE_LABEL[g.grade]})`, `괘사: ${g.poem}`, `풀이: ${g.meaning}`,
+          `띠 관계: ${sc.rel.label} — ${sc.rel.desc}`);
+
+        // 명식표
+        $('resCodeBadge').textContent = `${t.upper} · ${t.middle} · ${t.lower}`;
+        $('formulaAge').textContent = `${t.age}세`;
+        $('formulaUpperRes').textContent = t.upper;
+        $('formulaUpperEq').textContent = `(${t.age} + 14) = ${t.age + 14} ÷ 8 → 나머지 ${(t.age + 14) % 8}${(t.age + 14) % 8 === 0 ? ' → 8' : ''}`;
+        $('formulaMonthLabel').textContent = `2027 음력 ${lunar.month}월`;
+        $('formulaMonthDays').textContent = `${t.mDays}일 (${t.mDays === 30 ? '대월' : '소월'})`;
+        $('formulaWolgeon').innerHTML = `<span class="font-hanja">${gzStr(t.ms, t.mb)}</span> / ${t.wolgeon}`;
+        $('formulaMiddleRes').textContent = t.middle;
+        const midSum = t.mDays + t.wolgeon;
+        $('formulaMiddleEq').textContent = `(${t.mDays} + ${t.wolgeon}) = ${midSum} ÷ 6 → 나머지 ${midSum % 6}${midSum % 6 === 0 ? ' → 6' : ''}`;
+        $('formulaLunarDay').textContent = `${lunar.day}일`;
+        $('formulaTargetSolar').textContent = `${fmtDate(t.target)}`;
+        $('formulaIljin').innerHTML = `<span class="font-hanja">${gzStr(t.dgz % 10, t.dgz % 12)}</span> / ${t.iljin}`;
+        $('formulaLowerRes').textContent = t.lower;
+        const lowSum = lunar.day + t.iljin;
+        $('formulaLowerEq').textContent = `(${lunar.day} + ${t.iljin}) = ${lowSum} ÷ 3 → 나머지 ${lowSum % 3}${lowSum % 3 === 0 ? ' → 3' : ''}`;
+        const notes = [];
+        if (lunar.isLeap) notes.push(`윤${lunar.month}월생은 전통 법칙에 따라 평달 ${lunar.month}월을 기준으로 중괘·하괘를 산출했습니다.`);
+        if (t.adjusted) notes.push(`2027년 음력 ${lunar.month}월은 ${t.mDays}일까지(소월)라 일진 조회는 ${t.lookupDay}일로 대체했습니다. (공식의 생일 수는 ${lunar.day}을 그대로 사용)`);
+        const notice = $('dayAdjustNotice');
+        notice.textContent = notes.join(' ');
+        notice.classList.toggle('hidden', notes.length === 0);
+
+        // 총론
+        const months = sc.months;
+        const h1 = Math.round(months.slice(0, 6).reduce((a, b) => a + b, 0) / 6);
+        const h2 = Math.round(months.slice(6).reduce((a, b) => a + b, 0) / 6);
+        const order = months.map((s, i) => ({ s, i })).sort((a, b) => b.s - a.s);
+        const best = order.slice(0, 3).map(o => o.i).sort((a, b) => a - b).map(monthLabel).join(', ');
+        const worst = order.slice(-2).map(o => o.i).sort((a, b) => a - b).map(monthLabel).join('과 ');
+        ctx.best = best; ctx.worst = worst;
+        let trend;
+        if (h2 - h1 >= 4) trend = '상반기에 씨를 뿌리고 하반기에 거두는 선곤후태(先困後泰)의 흐름';
+        else if (h1 - h2 >= 4) trend = '상반기에 기세가 왕성하고 하반기에는 지키는 것이 중요한 선길후수(先吉後守)의 흐름';
+        else trend = '연중 기복이 크지 않은 고른 흐름';
+        const halfTip = h1 >= h2
+          ? '중요한 결정과 새 출발은 상반기에, 하반기에는 정리와 갈무리에 힘쓰는 것이 좋습니다'
+          : '상반기에는 준비와 내실을 다지고 하반기에 본격적으로 움직이는 것이 유리합니다';
+        const friends = SANHAP_FRIENDS[zb].map(b => ZODIAC_KO[b]).join('·');
+        ctx.friends = friends;
+
+        $('resTotalScoreBadge').textContent = `${sc.total}점`;
+        const p1 = `${who}의 2027년 정미년(丁未年) 본괘는 제 ${t.code}괘 「${g.title}(${g.poem.split(' ')[0]})」입니다. 괘사 "${g.poem}"은 ${GRADE_P1[g.grade]} 월별 기운을 살피면 ${trend}이며, 상반기 평균 ${h1}점·하반기 평균 ${h2}점으로 ${halfTip}.`;
+        const p2 = `${MID_P2[t.middle - 1]} 한 해의 핵심 전환점은 ${best} 무렵이니 이때 중요한 일을 결단하십시오.`;
+        const p3 = `${LOW_P3[t.lower - 1]} 특히 ${worst}에는 건강과 금전 지출, 구설을 각별히 조심하십시오. 띠로는 정미년과 ${sc.rel.label}의 관계이며, ${friends}띠 사람이 귀인이 되기 쉽습니다. ${GRADE_CLOSING[g.grade]}`;
+        $('overviewPara1').textContent = p1;
+        $('overviewPara2').textContent = p2;
+        $('overviewPara3').textContent = p3;
+        text.push('', `■ 신수 총론 (종합 ${sc.total}점)`, p1, p2, p3);
+
+        // 5대 분야
+        text.push('', '■ 5대 분야별 풀이');
+        $('categoryCardsContainer').innerHTML = CATEGORIES.map((c, i) => {
+          const s = sc.cats[i];
+          const lv = levelOf(s);
+          const body = c.text[lv === 'high' ? 0 : lv === 'mid' ? 1 : 2];
+          const tip = c.key === 'helper'
+            ? `귀인의 띠: ${friends}띠 · 정미년과 ${sc.rel.label}`
+            : c.tip;
+          text.push(`[${c.title}] ${s}점 — ${body} (개운: ${tip})`);
+          return `
+            <article class="report-card rounded-2xl p-5 sm:p-6 print-break-avoid">
+              <div class="flex items-center justify-between gap-3 mb-3">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-8 h-8 rounded-lg ${c.color} text-white font-hanja font-bold text-sm flex items-center justify-center shrink-0">${c.icon}</span>
+                  <h4 class="font-serif text-base sm:text-lg font-bold text-navy-800">${c.title}</h4>
+                </div>
+                <span class="text-sm font-bold text-navy-800 whitespace-nowrap">${scoreWord(s)} · <span class="font-serif text-lg">${s}</span>점</span>
+              </div>
+              ${gaugeHtml(s, scoreColor(s))}
+              <p class="narrative-body text-sm sm:text-[15px] text-ink-900 mt-3">${body}</p>
+              <p class="mt-2 text-xs text-gold-700 font-semibold">개운 포인트 · <span class="font-normal text-ink-700">${tip}</span></p>
+            </article>`;
+        }).join('');
+
+        // 월별
+        text.push('', '■ 월별 세운');
+        const fms = firstMonthStem(yearStem(TARGET_YEAR));
+        $('monthlyGrid').innerHTML = months.map((s, i) => {
+          const lv = levelOf(s);
+          const pick = hash(t.codeNum, 200 + i) % 4;
+          const body = `${MONTH_INTRO[i]} ${MONTH_POOL[lv][pick]}`;
+          const advice = MONTH_ADVICE[lv][(pick + i) % 4];
+          const start = lunarToSolar(TARGET_YEAR, i + 1, 1, false);
+          const endT = new Date(Date.UTC(start.year, start.month - 1, start.day) + (monthDays(TARGET_YEAR, i + 1) - 1) * DAY_MS);
+          const range = `양력 ${start.month}.${start.day} ~ ${endT.getUTCMonth() + 1}.${endT.getUTCDate()}`;
+          const mgz = gzStr(mod(fms + i, 10), mod(i + 2, 12));
+          text.push(`${monthLabel(i)} ${mgz}月 ${s}점 — ${body} (${advice})`);
+          return `
+            <div class="monthly-card-item p-4 rounded-xl bg-hanji-50 border border-hanji-200 print-break-avoid" data-half="${i < 6 ? 1 : 2}">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <div>
+                  <span class="font-serif font-bold text-navy-800">${monthLabel(i)}</span>
+                  <span class="ml-1 text-xs font-hanja text-gold-700 font-semibold">${mgz}月</span>
+                  <span class="block text-[11px] text-ink-400 mt-0.5">${range}</span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-white ${scoreColor(s)} whitespace-nowrap">${scoreWord(s)} ${s}</span>
+              </div>
+              ${gaugeHtml(s, scoreColor(s))}
+              <p class="narrative-body text-sm text-ink-700 mt-2.5">${body}</p>
+              <p class="text-xs text-gold-700 mt-1.5 font-semibold">개운 · <span class="font-normal text-ink-700">${advice}</span></p>
+            </div>`;
+        }).join('');
+        applyMonthFilter();
+
+        ctx.text.tojeong = text;
+      }
+
+      function applyMonthFilter() {
+        const f = state.monthFilter;
+        document.querySelectorAll('#monthlyGrid .monthly-card-item').forEach(el => {
+          const show = f === 'all' || el.dataset.half === (f === 'first' ? '1' : '2');
+          el.classList.toggle('hidden', !show);
+        });
+        setSegment([$('tabAllMonths'), $('tabFirstHalf'), $('tabSecondHalf')],
+          f === 'all' ? $('tabAllMonths') : f === 'first' ? $('tabFirstHalf') : $('tabSecondHalf'));
+      }
+
+      /* =====================================================================
+         [UI 4] 결과 렌더링 — 자미두수
+      ===================================================================== */
+      const GRID_POS = { 5: [1, 1], 6: [1, 2], 7: [1, 3], 8: [1, 4], 4: [2, 1], 9: [2, 4], 3: [3, 1], 10: [3, 4], 2: [4, 1], 1: [4, 2], 0: [4, 3], 11: [4, 4] };
+      const NATAL_SIHUA_EFFECT = ['이 분야에서 재물과 기회를 타고났습니다', '이 분야에서 주도권과 실력이 강합니다', '이 분야에서 명예와 평판이 따릅니다', '이 분야에 집착과 시련이 따르나 깊이 파고들면 전문성이 됩니다'];
+      const FLOW_SIHUA_EFFECT = ['재물과 기회가 새로 열립니다', '책임과 권한이 커집니다', '좋은 평판과 문서운이 따릅니다', '구설·지연을 조심해야 합니다'];
+      const FLOW_SIHUA_TEXT = [
+        (np, fp, fd) => `정미년의 화록이 본명 ${np}에 떨어져 유년 ${fp}을 밝힙니다. 올해는 ${fd} 쪽에서 재물과 기회의 문이 열리니, 이 영역에 시간과 정성을 투자하면 실질적인 이익으로 돌아옵니다. 태음의 화록은 꾸준히 모으고 불리는 재물이라 저축·부동산·장기 계획에 특히 이롭습니다.`,
+        (np, fp, fd) => `천동 화권이 본명 ${np}, 유년 ${fp}에 듭니다. ${fd} 쪽에서 주도권과 결정권이 강해지는 해입니다. 맡은 일에 책임을 지고 앞장서면 권위가 서지만, 편안함에 안주하려는 천동의 성질을 경계하고 실행으로 옮겨야 힘이 됩니다.`,
+        (np, fp, fd) => `천기 화과가 본명 ${np}, 유년 ${fp}에 듭니다. ${fd} 쪽에서 좋은 평판과 명예가 따르고 문서·시험·자격에 이롭습니다. 새로운 지식과 기획을 세상에 알리는 활동이 좋은 이름으로 남습니다.`,
+        (np, fp, fd) => `거문 화기가 본명 ${np}, 유년 ${fp}에 듭니다. ${fd} 쪽에서 말과 오해로 인한 구설, 집착과 지연이 생기기 쉽습니다. 이 영역에서는 서두르지 말고 사실을 확인하며 부드럽게 소통하면 오히려 깊은 교훈과 실속을 얻는 자리로 바뀝니다.`
+      ];
+
+      function sihuaBadges(z, k) {
+        let html = '';
+        if (k in z.natalSihua) { const i = z.natalSihua[k]; html += `<span class="sihua-badge sh-natal-${SIHUA_CLS[i]}">${SIHUA_H[i]}</span>`; }
+        if (k in z.flowSihua) { const i = z.flowSihua[k]; html += `<span class="sihua-badge sh-flow-${SIHUA_CLS[i]}">流${SIHUA_H[i]}</span>`; }
+        return html;
+      }
+
+      function renderZiweiGrid(ctx) {
+        const z = ctx.z;
+        const grid = $('ziweiChartGrid');
+        let html = '';
+        for (let b = 0; b < 12; b++) {
+          const [r, c] = GRID_POS[b];
+          const pi = z.natalName(b), fi = z.flowName(b);
+          const majors = majorsAt(z, b);
+          const minors = z.cells[b].filter(k => STAR[k].type !== 'major');
+          const majorHtml = majors.length
+            ? majors.map(k => `<span class="font-hanja font-bold text-navy-800 text-[13px] whitespace-nowrap">${STAR[k].h}${sihuaBadges(z, k)}</span>`).join('')
+            : `<span class="text-[11px] text-ink-400">空宮 · 借${majorsAt(z, mod(b + 6, 12)).map(k => STAR[k].h).join('') || '星'}</span>`;
+          const minorHtml = minors.map(k => {
+            const t = STAR[k].type;
+            const cls = t === 'sha' ? 'text-crimson-600' : t === 'lu' ? 'text-[#1B7A43]' : 'text-gold-700';
+            return `<span class="font-hanja ${cls} whitespace-nowrap">${STAR[k].h}${sihuaBadges(z, k)}</span>`;
+          }).join('');
+          const isMing = b === z.ming, isShen = b === z.shen, isDecade = b === z.curDecadeBranch;
+          html += `
+            <div class="zw-cell" data-b="${b}" role="button" tabindex="0" aria-label="${BRANCHES_KO[b]}궁 ${PALACES[pi].ko}" style="grid-row:${r};grid-column:${c}">
+              <div>
+                <div class="flex flex-wrap gap-x-1.5 gap-y-0.5">${majorHtml}</div>
+                <div class="flex flex-wrap gap-x-1.5 gap-y-0.5 mt-1 text-[11px] leading-tight">${minorHtml}</div>
+              </div>
+              <div class="mt-2 pt-1.5 border-t border-hanji-200 flex items-end justify-between gap-1">
+                <div>
+                  <div class="text-[12px] font-bold ${isMing ? 'text-crimson-600' : 'text-navy-800'} whitespace-nowrap">${PALACES[pi].ko}${isShen ? ' <span class="sihua-badge sh-natal-qu">身</span>' : ''}</div>
+                  <div class="text-[10px] font-semibold text-gold-700 whitespace-nowrap">流年 ${PALACES[fi].ko}</div>
+                </div>
+                <div class="text-right">
+                  <div class="font-hanja text-[12px] font-semibold text-ink-700">${gzStr(z.stemOf(b), b)}</div>
+                  <div class="text-[10px] whitespace-nowrap ${isDecade ? 'text-crimson-600 font-bold' : 'text-ink-400'}">${z.decade[b][0]}~${z.decade[b][1]}${isDecade ? ' ◀' : ''}</div>
+                </div>
+              </div>
+            </div>`;
+        }
+        const lunar = ctx.lunar;
+        html += `
+          <div class="zw-center">
+            <div>
+              <p class="text-[11px] font-bold tracking-[0.2em] text-gold-700">紫微斗數 命盤 · 2027 丁未 流年</p>
+              <p class="font-serif text-lg sm:text-xl font-bold text-navy-800 mt-1">${escapeHtml(ctx.who)} <span class="text-sm font-normal text-ink-500">(${ctx.gender === 'M' ? '男' : '女'} · ${z.forward ? '순행' : '역행'})</span></p>
+              <div class="mt-2 space-y-0.5 text-[12px] text-ink-700 leading-relaxed">
+                <p>양력 ${fmtDate(ctx.solar)} · 음력 ${lunar.year}.${lunar.isLeap ? '윤' : ''}${lunar.month}.${lunar.day}</p>
+                <p><span class="font-hanja">${gzStr(z.ys, z.yb)}年</span> · ${HOUR_KO[ctx.hour]} · <strong class="text-navy-800">${JU_NAME[z.ju]}</strong></p>
+                <p>명궁 <strong class="text-crimson-600 font-hanja">${BRANCHES[z.ming]}</strong> · 신궁 <strong class="text-gold-700 font-hanja">${BRANCHES[z.shen]}</strong> · 2027 세수 ${z.age2027}세</p>
+                <p>현재 대한: ${z.curDecadeBranch >= 0 ? `${PALACES[z.natalName(z.curDecadeBranch)].ko}(${BRANCHES[z.curDecadeBranch]}) ${z.decade[z.curDecadeBranch][0]}~${z.decade[z.curDecadeBranch][1]}세` : '동한(童限)'}</p>
+              </div>
+            </div>
+            <div class="mt-3 pt-3 border-t border-gold-400/40 text-[11px] text-ink-500 leading-relaxed">
+              생년사화 <span class="font-hanja">${STEMS[z.ys]}</span>: ${SIHUA_TABLE[z.ys].map((k, i) => `${STAR[k].ko}${SIHUA_H[i]}`).join(' · ')}<br/>
+              유년사화 <span class="font-hanja">丁</span>: 태음祿 · 천동權 · 천기科 · 거문忌
+            </div>
+          </div>`;
+        grid.innerHTML = html;
+      }
+
+      function palaceDescription(z, b) {
+        const pi = z.natalName(b), fi = z.flowName(b);
+        const parts = [`${PALACES[pi].ko}(${PALACES[pi].h})은 ${PALACE_DOMAIN[pi]}에 관한 일을 살피는 자리입니다.`];
+        const majors = majorsAt(z, b);
+        if (majors.length) {
+          parts.push(majors.map(k => MAJOR_INFO[k][2]).join(', ') + '.');
+        } else {
+          const opp = mod(b + 6, 12);
+          parts.push(`주성이 없는 공궁(空宮)이므로 대궁(${BRANCHES_KO[opp]}궁)의 ${majorListText(z, opp)} 기운을 빌려 해석합니다.`);
+        }
+        z.cells[b].forEach(k => {
+          if (k in z.natalSihua) parts.push(`타고난 ${STAR[k].ko} ${SIHUA_KO[z.natalSihua[k]]}가 있어 ${NATAL_SIHUA_EFFECT[z.natalSihua[k]]}.`);
+          if (k in z.flowSihua) parts.push(`2027년에는 ${STAR[k].ko} ${SIHUA_KO[z.flowSihua[k]]}가 들어 ${FLOW_SIHUA_EFFECT[z.flowSihua[k]]}.`);
+        });
+        const minors = z.cells[b].filter(k => STAR[k].type !== 'major');
+        if (minors.length) parts.push(`보조성: ${minors.map(k => `${STAR[k].ko}(${MINOR_INFO[k]})`).join(', ')}.`);
+        parts.push(`2027년 정미년에는 이 궁이 유년 ${PALACES[fi].ko}이 되어 ${PALACE_DOMAIN[fi]}의 흐름도 함께 보여 줍니다.`);
+        if (b === z.shen) parts.push('신궁(身宮)이 자리한 곳으로 인생 후반의 무게중심이 이 궁에 있습니다.');
+        if (b === z.curDecadeBranch) parts.push(`현재(2027년, ${z.age2027}세) 머무는 대한(大限) 궁으로 10년 운의 중심입니다.`);
+        return parts.join(' ');
+      }
+
+      function selectPalace(b) {
+        const z = state.ctx.z;
+        state.selected = b;
+        const opp = mod(b + 6, 12), t1 = mod(b + 4, 12), t2 = mod(b + 8, 12);
+        document.querySelectorAll('#ziweiChartGrid .zw-cell').forEach(el => {
+          const cb = Number(el.dataset.b);
+          el.classList.toggle('hl-self', cb === b);
+          el.classList.toggle('hl-opposite', cb === opp);
+          el.classList.toggle('hl-trine', cb === t1 || cb === t2);
+        });
+        const pi = z.natalName(b), fi = z.flowName(b);
+        $('inspPalaceTitle').textContent = `${PALACES[pi].ko} (${PALACES[pi].h}) · ${BRANCHES_KO[b]}궁`;
+        $('inspPalaceGanZhi').textContent = `${gzStr(z.stemOf(b), b)} · ${gzKo(z.stemOf(b), b)}`;
+        $('inspFlowPalace').textContent = `2027 유년 ${PALACES[fi].ko}`;
+        $('inspSanfangSummary').textContent =
+          `삼방사정: 본궁 ${BRANCHES[b]} · 대궁 ${BRANCHES[opp]} · 삼합 ${BRANCHES[t1]}·${BRANCHES[t2]} | 궁위 지수 ${palaceScore(z, b)}점`;
+        $('inspStarList').innerHTML = z.cells[b].length
+          ? z.cells[b].map(k => {
+            const t = STAR[k].type;
+            const cls = t === 'major' ? 'bg-navy-800 text-gold-200 border-navy-800'
+              : t === 'sha' ? 'bg-crimson-100 text-crimson-700 border-crimson-500/40'
+                : 'bg-gold-100 text-gold-700 border-gold-400/50';
+            return `<span class="px-2.5 py-1 rounded-full text-xs font-semibold border ${cls}">${starLabel(k)}${sihuaBadges(z, k)}</span>`;
+          }).join('')
+          : '<span class="text-xs text-ink-500">배치된 별이 없습니다.</span>';
+        $('inspDesc').textContent = palaceDescription(z, b);
+      }
+
+      function renderZiweiReports(ctx) {
+        const z = ctx.z;
+        const text = ['', '■ 자미두수 12궁 명반',
+          `${JU_NAME[z.ju]} · 명궁 ${BRANCHES[z.ming]} · 신궁 ${BRANCHES[z.shen]} · 생년사화(${STEMS[z.ys]}) ${SIHUA_TABLE[z.ys].map((k, i) => STAR[k].ko + SIHUA_H[i]).join(' ')}`];
+        for (let i = 0; i < 12; i++) {
+          const b = mod(z.ming - i, 12);
+          text.push(`${PALACES[i].ko}(${gzStr(z.stemOf(b), b)}): ${z.cells[b].map(k => STAR[k].ko).join('·') || '-'} / 유년 ${PALACES[z.flowName(b)].ko}`);
+        }
+
+        // 리포트 1: 명궁 · 신궁
+        const mingMajors = majorsAt(z, z.ming);
+        $('zwMingStarsBadge').textContent = `명궁 ${BRANCHES_KO[z.ming]}(${BRANCHES[z.ming]}) · ${mingMajors.length ? mingMajors.map(k => STAR[k].ko).join('·') : '공궁'}`;
+        $('zwMingSubTitle').textContent = `명궁(命宮) ${majorListText(z, z.ming)}의 타고난 기질과 그릇`;
+        const mp = [];
+        if (mingMajors.length) {
+          mingMajors.forEach(k => mp.push(MAJOR_INFO[k][1]));
+          if (mingMajors.length >= 2) mp.push(`${mingMajors.map(k => STAR[k].ko).join('과 ')}의 기운이 한 궁에 어우러져(同宮), 두 별의 장점을 함께 쓰는 복합적인 그릇을 갖추었습니다.`);
+        } else {
+          const opp = mod(z.ming + 6, 12);
+          mp.push(`명궁에 주성이 없는 명무정요(命無正曜) 격으로, 대궁인 천이궁의 ${majorListText(z, opp)}을 빌려 봅니다. 환경과 사람에 따라 유연하게 변하는 적응력이 장점입니다.`);
+          majorsAt(z, opp).forEach(k => mp.push(MAJOR_INFO[k][1]));
+        }
+        z.cells[z.ming].forEach(k => {
+          if (k in z.natalSihua) mp.push(`명궁의 ${STAR[k].ko} ${SIHUA_KO[z.natalSihua[k]]}로 ${NATAL_SIHUA_EFFECT[z.natalSihua[k]].replace('이 분야', '자신의 삶 전반')}.`);
+        });
+        const lucky = z.cells[z.ming].filter(k => ['lucky', 'lu'].includes(STAR[k].type));
+        const sha = z.cells[z.ming].filter(k => STAR[k].type === 'sha');
+        if (lucky.length) mp.push(`명궁에 ${lucky.map(k => STAR[k].ko).join('·')}이(가) 함께해 주변의 도움과 재능이 더해집니다.`);
+        if (sha.length) mp.push(`${sha.map(k => STAR[k].ko).join('·')}이(가) 동궁하여 기복과 승부가 따르니, 감정을 다스릴수록 큰 그릇이 됩니다.`);
+        mp.push(`오행국은 ${JU_NAME[z.ju]}으로 첫 대한이 ${z.ju}세에 시작하며 대한은 ${z.forward ? '순행(順行)' : '역행(逆行)'}합니다.`);
+        $('zwMingNarrative').textContent = mp.join(' ');
+
+        const shenIdx = z.natalName(z.shen);
+        $('zwShenSubTitle').textContent = `신궁(身宮) ${PALACES[shenIdx].ko}이 가리키는 인생 후반의 중심축`;
+        const shenTxt = `${SHEN_TEXT[shenIdx] || ''} 신궁의 주성은 ${majorListText(z, z.shen)}입니다.`;
+        $('zwShenNarrative').textContent = shenTxt;
+        text.push('', '■ 명궁 주성 풀이', $('zwMingNarrative').textContent, '', '■ 신궁 풀이', shenTxt);
+
+        // 리포트 2: 유년 사화
+        text.push('', '■ 2027 정미년 유년 사화');
+        const flowPos = {};
+        $('zwFlowSihuaCards').innerHTML = SIHUA_TABLE[3].map((k, i) => {
+          const b = z.posOf[k];
+          const np = PALACES[z.natalName(b)].ko, fpIdx = z.flowName(b), fp = PALACES[fpIdx].ko;
+          flowPos[i] = { b, fpIdx };
+          const body = FLOW_SIHUA_TEXT[i](np, fp, PALACE_DOMAIN[fpIdx]);
+          text.push(`${STAR[k].ko} ${SIHUA_KO[i]} → ${BRANCHES_KO[b]}궁 (본명 ${np} / 유년 ${fp}): ${body}`);
+          return `
+            <div class="p-4 sm:p-5 rounded-xl bg-hanji-50 border border-hanji-200 print-break-avoid">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <div class="flex items-center gap-2">
+                  <span class="sihua-badge sh-flow-${SIHUA_CLS[i]} !text-xs !px-2 !py-1">流${SIHUA_H[i]}</span>
+                  <h4 class="font-serif font-bold text-navy-800">${STAR[k].ko}(${STAR[k].h}) ${SIHUA_KO[i]}</h4>
+                </div>
+                <span class="text-xs font-semibold text-gold-700 whitespace-nowrap">${BRANCHES_KO[b]}궁(${BRANCHES[b]})</span>
+              </div>
+              <p class="text-xs text-ink-500 mb-2">본명 <strong class="text-navy-800">${np}</strong> → 2027 유년 <strong class="text-crimson-600">${fp}</strong></p>
+              <p class="narrative-body text-sm text-ink-900">${body}</p>
+            </div>`;
+        }).join('');
+        ctx.flowPos = flowPos;
+
+        // 리포트 3: 유년 삼방
+        const ROLES = [
+          { b: 7, title: '유년 명궁', role: '한 해 전체 운세의 중심' },
+          { b: 3, title: '유년 재백궁', role: '올해 재물의 흐름' },
+          { b: 11, title: '유년 관록궁', role: '올해 일과 명예의 흐름' }
+        ];
+        text.push('', '■ 2027 유년 삼방사정');
+        ctx.flowMingScore = palaceScore(z, 7);
+        $('zwFlowThreePalaces').innerHTML = ROLES.map(r => {
+          const s = palaceScore(z, r.b);
+          const np = PALACES[z.natalName(r.b)].ko;
+          const majors = majorsAt(z, r.b);
+          const parts = [`본명 ${np}에 해당하는 ${BRANCHES_KO[r.b]}궁이 ${r.role}을 맡습니다.`];
+          parts.push(majors.length ? majors.map(k => MAJOR_INFO[k][2]).join(', ') + '.' : `주성이 없어 대궁 ${majorListText(z, mod(r.b + 6, 12))}의 기운을 빌려 봅니다.`);
+          z.cells[r.b].forEach(k => { if (k in z.flowSihua) parts.push(`유년 ${STAR[k].ko} ${SIHUA_KO[z.flowSihua[k]]}가 들어 ${FLOW_SIHUA_EFFECT[z.flowSihua[k]]}.`); });
+          const lv = levelOf(s);
+          parts.push(lv === 'high' ? '기운이 왕성하니 적극적으로 움직일 때입니다.' : lv === 'mid' ? '무난한 흐름이니 계획대로 꾸준히 나아가십시오.' : '변수가 있으니 무리하지 말고 기반을 다지십시오.');
+          const body = parts.join(' ');
+          text.push(`[${r.title} · ${BRANCHES[r.b]}] ${s}점 — ${body}`);
+          return `
+            <div class="p-4 sm:p-5 rounded-xl bg-hanji-50 border border-hanji-200 flex flex-col print-break-avoid">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-xs font-bold text-crimson-600 tracking-wider">${r.title}</span>
+                <span class="font-hanja text-lg font-bold text-navy-800">${BRANCHES[r.b]}</span>
+              </div>
+              <p class="text-xs text-ink-500 mb-2">본명 ${np} · ${majorListText(z, r.b)}</p>
+              <div class="flex items-center gap-2 mb-2">
+                <div class="flex-1">${gaugeHtml(s, scoreColor(s))}</div>
+                <span class="text-sm font-bold text-navy-800 whitespace-nowrap">${s}점</span>
+              </div>
+              <p class="narrative-body text-sm text-ink-900">${body}</p>
+            </div>`;
+        }).join('');
+
+        // 종합
+        const g = ctx.t.gua;
+        const fm = ctx.flowMingScore;
+        let agree;
+        if (g.grade <= 1 && fm >= 66) agree = '두 체계가 모두 길한 흐름을 가리키니, 올해는 망설이지 말고 뜻한 바를 추진할 때입니다.';
+        else if (g.grade >= 3 && fm < 62) agree = '두 체계가 함께 조심을 권하니, 확장보다 수성(守成)에 무게를 두고 건강과 재정을 먼저 챙기십시오.';
+        else agree = '두 체계의 신호가 엇갈리니, 길한 영역에서는 과감히 나아가고 약한 영역은 미리 대비하는 선택과 집중이 필요합니다.';
+        const lu = flowPos[0], ji = flowPos[3];
+        const synth = `${ctx.who}의 2027년은 토정비결로 제 ${ctx.t.code}괘 「${g.title}」, ${GRADE_LABEL[g.grade]}의 해이며, 자미두수 유년 명궁(未)의 궁위 지수는 ${fm}점입니다. ${agree} `
+          + `재물과 기회는 태음 화록이 드는 유년 ${PALACES[lu.fpIdx].ko}(${PALACE_DOMAIN[lu.fpIdx]})에서 열리고, 조심할 곳은 거문 화기가 드는 유년 ${PALACES[ji.fpIdx].ko}(${PALACE_DOMAIN[ji.fpIdx]})입니다. `
+          + `월별로는 ${ctx.best} 무렵이 가장 힘 있는 때이고, ${ctx.worst}에는 한 템포 쉬어 가십시오. `
+          + `띠로는 정미년과 ${ctx.sc.rel.label}의 관계이며 ${ctx.friends}띠 사람이 귀인이 되기 쉽습니다. ${GRADE_CLOSING[g.grade]}`;
+        $('zwSynthesisText').textContent = synth;
+        text.push('', '■ 토정비결 × 자미두수 종합 개운 전략', synth);
+        ctx.text.ziwei = text;
+      }
+
+      /* =====================================================================
+         [UI 5] 모드 전환 · 복사 · 인쇄 · 초기화
+      ===================================================================== */
+      function setMode(mode) {
+        state.mode = mode;
+        $('panelTojeong').classList.toggle('hidden', mode !== 'tojeong');
+        $('panelZiwei').classList.toggle('hidden', mode !== 'ziwei');
+        const tabs = [$('modeTabTojeong'), $('modeTabZiwei')];
+        setSegment(tabs, mode === 'tojeong' ? tabs[0] : tabs[1]);
+        animateGauges(mode === 'tojeong' ? $('panelTojeong') : $('panelZiwei'));
+      }
+
+      async function copyReport() {
+        if (!state.ctx) return;
+        const c = state.ctx;
+        const txt = ['2027 정미년(丁未年) 정통 토정비결 × 자미두수 통합 명리 리포트', ''].concat(c.text.tojeong, c.text.ziwei).join('\n');
+        try {
+          await navigator.clipboard.writeText(txt);
+          toast('통합 리포트 전체가 복사되었습니다.');
+        } catch (e) {
+          const ta = document.createElement('textarea');
+          ta.value = txt;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          let ok = false;
+          try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+          ta.remove();
+          toast(ok ? '통합 리포트 전체가 복사되었습니다.' : '복사에 실패했습니다. 브라우저 권한을 확인해 주세요.');
+        }
+      }
+
+      // 인쇄 시 두 패널·전체 월을 모두 펼침
+      window.addEventListener('beforeprint', () => {
+        if (!state.ctx) return;
+        $('panelTojeong').classList.remove('hidden');
+        $('panelZiwei').classList.remove('hidden');
+        document.querySelectorAll('.gauge-fill').forEach(el => { el.style.width = el.dataset.w + '%'; });
+      });
+      window.addEventListener('afterprint', () => { if (state.ctx) setMode(state.mode); });
+
+      function resetAll() {
+        $('resultSection').classList.add('hidden');
+        $('loadingSection').classList.add('hidden');
+        $('inputSection').classList.remove('hidden');
+        state.ctx = null;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      /* =====================================================================
+         [UI 6] 제출 처리
+      ===================================================================== */
+      function handleSubmit(e) {
+        e.preventDefault();
+        $('formError').classList.add('hidden');
+        const y = Number(yearSel.value), m = Number(monthSel.value), d = Number(daySel.value);
+        if (!y || !m || !d) {
+          showError(state.cal === 'leap' && !leapMonth(y) ? `${y}년(음력)에는 윤달이 없습니다. '음력 평달'을 선택해 주세요.` : '생년월일을 모두 선택해 주세요.');
+          return;
+        }
+        let solar, lunar;
+        if (state.cal === 'solar') {
+          solar = { year: y, month: m, day: d };
+          lunar = solarToLunar(y, m, d);
+        } else {
+          const isLeap = state.cal === 'leap';
+          lunar = { year: y, month: m, day: d, isLeap };
+          solar = lunarToSolar(y, m, d, isLeap);
+        }
+        if (!lunar || !solar) { showError('입력하신 날짜를 변환할 수 없습니다. 날짜를 다시 확인해 주세요.'); return; }
+        if (lunar.year > 2026) { showError('2027년 음력 생은 세수 계산 범위를 벗어납니다. 2026년 음력 이전 출생만 지원합니다.'); return; }
+
+        const name = $('userName').value.trim();
+        const hour = Number($('birthHour').value);
+        const t = computeTojeong(lunar);
+        const sc = buildTojeongScores(t, yearBranch(lunar.year));
+        const z = computeZiwei(lunar, hour, state.gender);
+        const ctx = { who: name ? `${name} 님` : '귀하', name, gender: state.gender, hour, solar, lunar, t, sc, z, text: {} };
+        state.ctx = ctx;
+
+        $('inputSection').classList.add('hidden');
+        $('loadingSection').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        setTimeout(() => {
+          try {
+            renderTojeong(ctx);
+            renderZiweiGrid(ctx);
+            renderZiweiReports(ctx);
+            selectPalace(z.ming);
+          } catch (err) {
+            console.error(err);
+            $('loadingSection').classList.add('hidden');
+            $('inputSection').classList.remove('hidden');
+            showError('리포트 생성 중 오류가 발생했습니다. 입력값을 확인해 주세요.');
+            return;
+          }
+          $('loadingSection').classList.add('hidden');
+          const rs = $('resultSection');
+          rs.classList.remove('hidden', 'fade-slide-up');
+          void rs.offsetWidth;
+          rs.classList.add('fade-slide-up');
+          state.monthFilter = 'all';
+          applyMonthFilter();
+          setMode('tojeong');
+          setFormula(false);
+        }, 1300);
+      }
+
+      function setFormula(open) {
+        $('formulaBody').classList.toggle('hidden', !open);
+        $('btnToggleFormula').setAttribute('aria-expanded', open ? 'true' : 'false');
+        $('formulaToggleIcon').textContent = open ? '접기 ▲' : '펼치기 ▼';
+      }
+
+      /* =====================================================================
+         [INIT] 이벤트 바인딩
+      ===================================================================== */
+      populateYears();
+      updateMonths();
+      yearSel.addEventListener('change', updateMonths);
+      monthSel.addEventListener('change', updateDays);
+      daySel.addEventListener('change', updateHint);
+      btnSolar.addEventListener('click', () => setCal('solar'));
+      btnLunarNormal.addEventListener('click', () => setCal('lunar'));
+      btnLunarLeap.addEventListener('click', () => setCal('leap'));
+      btnMale.addEventListener('click', () => setGender('M'));
+      btnFemale.addEventListener('click', () => setGender('F'));
+      $('fortuneForm').addEventListener('submit', handleSubmit);
+
+      $('modeTabTojeong').addEventListener('click', () => setMode('tojeong'));
+      $('modeTabZiwei').addEventListener('click', () => setMode('ziwei'));
+      $('btnToggleFormula').addEventListener('click', () => setFormula($('formulaBody').classList.contains('hidden')));
+      $('tabAllMonths').addEventListener('click', () => { state.monthFilter = 'all'; applyMonthFilter(); });
+      $('tabFirstHalf').addEventListener('click', () => { state.monthFilter = 'first'; applyMonthFilter(); });
+      $('tabSecondHalf').addEventListener('click', () => { state.monthFilter = 'second'; applyMonthFilter(); });
+
+      $('ziweiChartGrid').addEventListener('click', e => {
+        const cell = e.target.closest('.zw-cell');
+        if (cell) selectPalace(Number(cell.dataset.b));
+      });
+      $('ziweiChartGrid').addEventListener('keydown', e => {
+        const cell = e.target.closest('.zw-cell');
+        if (cell && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); selectPalace(Number(cell.dataset.b)); }
+      });
+
+      ['btnTopCopy', 'btnCopyFullReport'].forEach(id => $(id).addEventListener('click', copyReport));
+      ['btnTopPrint', 'btnPrintReport'].forEach(id => $(id).addEventListener('click', () => window.print()));
+      ['btnTopReset', 'btnReset'].forEach(id => $(id).addEventListener('click', resetAll));
+
+      // 테스트·디버그용 엔진 노출
+      window.__engine = { solarToLunar, lunarToSolar, computeTojeong, computeZiwei, dayGanzhiIndex };
+    })();
+  </script>
+</body>
+</html>
